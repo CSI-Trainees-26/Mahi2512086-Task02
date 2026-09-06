@@ -265,8 +265,6 @@
 
                 </div>
 
-
-
                 <!-- SLEEP CARD -->
 
                 <div class="stat-card">
@@ -280,7 +278,7 @@
                             </p>
 
                             <h2>
-                                7.5 <span>hrs</span>
+                              <span id="sleepAmount"> 7.5 </span> <span>hrs</span>
                             </h2>
 
                         </div>
@@ -296,7 +294,7 @@
 
 
                     <p class="muted-text">
-                        Weekly average: 7.2 hrs
+                        Weekly average: <span id="weeklySleepAverage">7.2</span> hrs
                     </p>
 
 
@@ -306,15 +304,12 @@
                             Last night
                         </span>
 
-                        <strong>
+                        <strong id="sleepStatus">
                             Good sleep
                         </strong>
 
                     </div>
-
-                </div>
-
-
+              </div>
 
                 <!-- CALORIES CARD -->
 
@@ -329,7 +324,7 @@
                             </p>
 
                             <h2>
-                                1,450 <span>kcal</span>
+                               <span id="calorieAmount"> 1,450 </span> <span>kcal</span>
                             </h2>
 
                         </div>
@@ -351,714 +346,870 @@
 
                     <div class="progress-bar">
 
-                        <div class="progress-fill calorie-progress">
+                        <div class="progress-fill calorie-progress" id="calorieProgress">
                         </div>
 
                     </div>
 
 
                     <p class="percentage">
-                        72% of daily goal
+                        <span id="caloriePercentage">72</span>% of daily goal
                     </p>
 
                 </div>
 
             </section>
 
-
-
             <!-- =====================================
-                 TASKS + HABITS
-            ====================================== -->
+     TASKS + HABITS
+====================================== -->
 
-            <section class="dashboard-grid">
+<section class="dashboard-grid">
+
+    <div class="tasks-habits-row">
+
+        <!-- =================================
+             TASKS CARD
+        ================================== -->
+
+        <div class="dashboard-card tasks-card">
+
+            <div class="section-header">
+
+                <div>
+                    <p class="card-label">
+                        TODAY
+                    </p>
+
+                    <h2>
+                        Today's Tasks
+                    </h2>
+                </div>
+
+                <a href="#">
+                    View all →
+                </a>
+
+            </div>
 
 
-                <!-- =================================
-                     TASKS
-                ================================== -->
+            <!-- ==============================
+                 TASK LIST
+            =============================== -->
 
-                <div class="dashboard-card tasks-card">
+            <div class="task-list">
 
 
-                    <div class="section-header">
+                <!-- TASK 1 -->
+
+                <div class="task">
+
+                    <div class="task-left">
+
+                        <div
+                            class="task-check completed"
+                            data-task="Morning Workout">
+                            ✓
+                        </div>
 
                         <div>
+                            <h3>
+                                Morning Workout
+                            </h3>
 
-                            <p class="card-label">
-                                TODAY
+                            <p>
+                                07:00 AM · Fitness
                             </p>
-
-                            <h2>
-                                Today's Tasks
-                            </h2>
-
-                        </div>
-
-
-                        <a href="#">
-                            View all →
-                        </a>
-
-                    </div>
-
-
-
-                    <!-- TASK 1 -->
-
-                    <div class="task-list">
-
-
-                        <div class="task">
-
-                            <div class="task-left">
-
-                                <div class="task-check completed">
-                                    ✓
-                                </div>
-
-                                <div>
-
-                                    <h3>
-                                        Morning Workout
-                                    </h3>
-
-                                    <p>
-                                        07:00 AM · Fitness
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <span class="task-status done">
-                                Done
-                            </span>
-
-                        </div>
-
-
-
-                        <!-- TASK 2 -->
-
-                        <div class="task">
-
-                            <div class="task-left">
-
-                                <div class="task-check">
-                                </div>
-
-                                <div>
-
-                                    <h3>
-                                        Complete DSA Assignment
-                                    </h3>
-
-                                    <p>
-                                        10:00 AM · Productivity
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <span class="task-status pending">
-                                Pending
-                            </span>
-
-                        </div>
-
-
-
-                        <!-- TASK 3 -->
-
-                        <div class="task">
-
-                            <div class="task-left">
-
-                                <div class="task-check">
-                                </div>
-
-                                <div>
-
-                                    <h3>
-                                        Read 20 Pages
-                                    </h3>
-
-                                    <p>
-                                        06:00 PM · Personal
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <span class="task-status pending">
-                                Pending
-                            </span>
-
-                        </div>
-
-
-
-                        <!-- TASK 4 -->
-
-                        <div class="task">
-
-                            <div class="task-left">
-
-                                <div class="task-check completed">
-                                    ✓
-                                </div>
-
-                                <div>
-
-                                    <h3>
-                                        Drink Enough Water
-                                    </h3>
-
-                                    <p>
-                                        Throughout the day · Health
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <span class="task-status done">
-                                Done
-                            </span>
-
                         </div>
 
                     </div>
 
+                    <span class="task-status done">
+                        Done
+                    </span>
+
+                </div>
 
 
-                    <button class="add-task-button">
+                <!-- TASK 2 -->
 
-                        <i data-lucide="plus"></i>
+                <div class="task">
 
-                        Add New Task
+                    <div class="task-left">
+
+                        <div
+                            class="task-check"
+                            data-task="Drink Water">
+                        </div>
+
+                        <div>
+                            <h3>
+                                Drink Water
+                            </h3>
+
+                            <p>
+                                09:00 AM · Health
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <span class="task-status">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <!-- TASK 3 -->
+
+                <div class="task">
+
+                    <div class="task-left">
+
+                        <div
+                            class="task-check"
+                            data-task="Read Book">
+                        </div>
+
+                        <div>
+                            <h3>
+                                Read Book
+                            </h3>
+
+                            <p>
+                                06:00 PM · Personal
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <span class="task-status">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <!-- TASK 4 -->
+
+                <div class="task">
+
+                    <div class="task-left">
+
+                        <div
+                            class="task-check"
+                            data-task="Do DSA">
+                        </div>
+
+                        <div>
+                            <h3>
+                                Complete DSA Assignment
+                            </h3>
+
+                            <p>
+                                10:00 AM · Productivity
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <span class="task-status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <!-- TASK 5 -->
+
+                <div class="task">
+
+                    <div class="task-left">
+
+                        <div
+                            class="task-check"
+                            data-task="Read 20 Pages">
+                        </div>
+
+                        <div>
+                            <h3>
+                                Read 20 Pages
+                            </h3>
+
+                            <p>
+                                06:00 PM · Personal
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <span class="task-status pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <!-- TASK 6 -->
+
+                <div class="task">
+
+                    <div class="task-left">
+
+                        <div
+                            class="task-check completed"
+                            data-task="drink enough water">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>
+                                Drink Enough Water
+                            </h3>
+
+                            <p>
+                                Throughout the day · Health
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <span class="task-status done">
+                        Done
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==============================
+                 ADD NEW TASK
+            =============================== -->
+
+            <button
+                class="add-task-button"
+                id="addTaskBtn"
+                type="button">
+
+                <i data-lucide="plus"></i>
+
+                Add New Task
+
+            </button>
+
+
+            <!-- ==============================
+                 ADD TASK FORM
+            =============================== -->
+
+            <div
+                id="addTaskForm"
+                class="add-task-form">
+
+                <div class="add-task-header">
+
+                    <div>
+
+                        <p class="card-label">
+                            NEW TASK
+                        </p>
+
+                        <h3>
+                            Create a new task
+                        </h3>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="closeTaskForm"
+                        class="close-task-button">
+
+                        ×
 
                     </button>
 
                 </div>
 
 
-
-                <!-- =================================
-                     HABITS
-                ================================== -->
-
-                <div class="dashboard-card habits-card">
-
-
-                    <div class="section-header">
-
-                        <div>
-
-                            <p class="card-label">
-                                DAILY ROUTINE
-                            </p>
-
-                            <h2>
-                                Today's Habits
-                            </h2>
-
-                        </div>
-
-
-                        <a href="#">
-                            View all →
-                        </a>
-
-                    </div>
-
-
-
-                    <!-- HABIT 1 -->
-
-                    <div class="habit">
-
-                        <div class="habit-icon">
-
-                            <i data-lucide="dumbbell"></i>
-
-                        </div>
-
-
-                        <div class="habit-info">
-
-                            <h3>
-                                Workout
-                            </h3>
-
-                            <p>
-                                Fitness
-                            </p>
-
-                        </div>
-
-
-                        <div class="habit-check completed">
-                            ✓
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- HABIT 2 -->
-
-                    <div class="habit">
-
-                        <div class="habit-icon">
-
-                            <i data-lucide="book-open"></i>
-
-                        </div>
-
-
-                        <div class="habit-info">
-
-                            <h3>
-                                Study
-                            </h3>
-
-                            <p>
-                                Productivity
-                            </p>
-
-                        </div>
-
-
-                        <div class="habit-check completed">
-                            ✓
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- HABIT 3 -->
-
-                    <div class="habit">
-
-                        <div class="habit-icon">
-
-                            <i data-lucide="brain"></i>
-
-                        </div>
-
-
-                        <div class="habit-info">
-
-                            <h3>
-                                Meditation
-                            </h3>
-
-                            <p>
-                                Wellness
-                            </p>
-
-                        </div>
-
-
-                        <div class="habit-check">
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- HABIT 4 -->
-
-                    <div class="habit">
-
-                        <div class="habit-icon">
-
-                            <i data-lucide="book-marked"></i>
-
-                        </div>
-
-
-                        <div class="habit-info">
-
-                            <h3>
-                                Reading
-                            </h3>
-
-                            <p>
-                                Personal
-                            </p>
-
-                        </div>
-
-
-                        <div class="habit-check completed">
-                            ✓
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- HABIT PROGRESS -->
-
-                    <div class="habit-progress">
-
-                        <div class="progress-header">
-
-                            <span>
-                                Habit Progress
-                            </span>
-
-                            <strong>
-                                3 / 5
-                            </strong>
-
-                        </div>
-
-
-                        <div class="progress-bar">
-
-                            <div class="progress-fill habit-progress-fill">
-                            </div>
-
-                        </div>
-
-                    </div>
+                <div class="task-input-group">
+
+                    <label for="taskInput">
+                        What do you want to accomplish?
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="e.g. Complete DSA assignment">
 
                 </div>
 
-            </section>
 
+                <div class="task-options">
 
+                    <div class="task-option">
 
-            <!-- =====================================
-                 POMODORO + WEEKLY ANALYTICS
-            ====================================== -->
-
-            <section class="bottom-grid">
-
-
-                <!-- =================================
-                     POMODORO
-                ================================== -->
-
-                <div class="dashboard-card pomodoro-card">
-
-
-                    <div class="section-header">
-
-                        <div>
-
-                            <p class="card-label">
-                                FOCUS SESSION
-                            </p>
-
-                            <h2>
-                                Pomodoro
-                            </h2>
-
-                        </div>
-
-
-                        <i data-lucide="timer" class="timer-icon">
-                        </i>
-
-                    </div>
-
-
-
-                    <div class="timer">
-
-                        <h1>
-                            25:00
-                        </h1>
-
-                        <p>
-                            Ready to focus?
-                        </p>
-
-                    </div>
-
-
-
-                    <div class="pomodoro-task">
-
-                        <label>
-                            Task
+                        <label for="taskDate">
+                            Date
                         </label>
 
-
-                        <select>
+                        <select id="taskDate">
 
                             <option>
-                                Select a task
+                                Today
                             </option>
 
                             <option>
-                                Complete DSA Assignment
+                                Tomorrow
                             </option>
-
-                            <option>
-                                Read 20 Pages
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-
-                    <div class="timer-buttons">
-
-                        <button class="start-button">
-
-                            <i data-lucide="play"></i>
-
-                            Start
-
-                        </button>
-
-
-                        <button class="reset-button">
-
-                            Reset
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =================================
-                     WEEKLY ANALYTICS
-                ================================== -->
-
-                <div class="dashboard-card analytics-card">
-
-
-                    <div class="section-header">
-
-                        <div>
-
-                            <p class="card-label">
-                                OVERVIEW
-                            </p>
-
-                            <h2>
-                                Weekly Progress
-                            </h2>
-
-                        </div>
-
-
-                        <select class="week-select">
 
                             <option>
                                 This Week
                             </option>
 
+                        </select>
+
+                    </div>
+
+
+                    <div class="task-option">
+
+                        <label for="taskCategory">
+                            Category
+                        </label>
+
+                        <select id="taskCategory">
+
                             <option>
-                                Last Week
+                                Personal
+                            </option>
+
+                            <option>
+                                Fitness
+                            </option>
+
+                            <option>
+                                Health
+                            </option>
+
+                            <option>
+                                Productivity
                             </option>
 
                         </select>
 
                     </div>
 
+                </div>
 
 
-                    <!-- ANALYTICS STATS -->
+                <button
+                    type="button"
+                    id="saveTaskBtn"
+                    class="save-task-button">
 
-                    <div class="analytics-stats">
+                    <i data-lucide="plus"></i>
 
+                    Add Task
 
-                        <div>
+                </button>
 
-                            <span>
-                                Tasks
-                            </span>
+            </div>
 
-                            <strong>
-                                24
-                            </strong>
+        </div>
 
-                            <small>
-                                ↑ 18%
-                            </small>
 
-                        </div>
+        <!-- =================================
+             HABITS CARD
+        ================================== -->
 
+        <div class="dashboard-card habits-card">
 
-                        <div>
+            <div class="section-header">
 
-                            <span>
-                                Habits
-                            </span>
+                <div>
 
-                            <strong>
-                                18
-                            </strong>
+                    <p class="card-label">
+                        DAILY ROUTINE
+                    </p>
 
-                            <small>
-                                ↑ 12%
-                            </small>
+                    <h2>
+                        Today's Habits
+                    </h2>
 
-                        </div>
+                </div>
 
+                <a href="#">
+                    View all →
+                </a>
 
-                        <div>
+            </div>
 
-                            <span>
-                                Water
-                            </span>
 
-                            <strong>
-                                13.5L
-                            </strong>
+            <!-- HABIT 1 -->
 
-                            <small>
-                                Avg. 1.9L
-                            </small>
+            <div class="habit">
 
-                        </div>
+                <div class="habit-icon">
 
+                    <i data-lucide="dumbbell"></i>
 
-                        <div>
+                </div>
 
-                            <span>
-                                Sleep
-                            </span>
+                <div class="habit-info">
 
-                            <strong>
-                                52h
-                            </strong>
+                    <h3>
+                        Workout
+                    </h3>
 
-                            <small>
-                                Avg. 7.4h
-                            </small>
+                    <p>
+                        Fitness
+                    </p>
 
-                        </div>
+                </div>
 
-                    </div>
+                <div class="habit-check completed">
+                    ✓
+                </div>
 
+            </div>
 
 
-                    <!-- CHART -->
+            <!-- HABIT 2 -->
 
-                    <div class="chart">
+            <div class="habit">
 
-                        <div class="chart-bars">
+                <div class="habit-icon">
 
+                    <i data-lucide="book-open"></i>
 
-                            <div class="bar-container">
+                </div>
 
-                                <div class="bar bar-1">
-                                </div>
+                <div class="habit-info">
 
-                                <span>
-                                    Mon
-                                </span>
+                    <h3>
+                        Study
+                    </h3>
 
-                            </div>
+                    <p>
+                        Productivity
+                    </p>
 
+                </div>
 
+                <div class="habit-check completed">
+                    ✓
+                </div>
 
-                            <div class="bar-container">
+            </div>
 
-                                <div class="bar bar-2">
-                                </div>
 
-                                <span>
-                                    Tue
-                                </span>
+            <!-- HABIT 3 -->
 
-                            </div>
+            <div class="habit">
 
+                <div class="habit-icon">
 
+                    <i data-lucide="brain"></i>
 
-                            <div class="bar-container">
+                </div>
 
-                                <div class="bar bar-3">
-                                </div>
+                <div class="habit-info">
 
-                                <span>
-                                    Wed
-                                </span>
+                    <h3>
+                        Meditation
+                    </h3>
 
-                            </div>
+                    <p>
+                        Wellness
+                    </p>
 
+                </div>
 
+                <div class="habit-check">
+                </div>
 
-                            <div class="bar-container">
+            </div>
 
-                                <div class="bar bar-4">
-                                </div>
 
-                                <span>
-                                    Thu
-                                </span>
+            <!-- HABIT 4 -->
 
-                            </div>
+            <div class="habit">
 
+                <div class="habit-icon">
 
+                    <i data-lucide="book-marked"></i>
 
-                            <div class="bar-container">
+                </div>
 
-                                <div class="bar bar-5">
-                                </div>
+                <div class="habit-info">
 
-                                <span>
-                                    Fri
-                                </span>
+                    <h3>
+                        Reading
+                    </h3>
 
-                            </div>
+                    <p>
+                        Personal
+                    </p>
 
+                </div>
 
+                <div class="habit-check completed">
+                    ✓
+                </div>
 
-                            <div class="bar-container">
+            </div>
 
-                                <div class="bar bar-6">
-                                </div>
 
-                                <span>
-                                    Sat
-                                </span>
+            <!-- ==============================
+                 HABIT PROGRESS
+            =============================== -->
 
-                            </div>
+            <div class="habit-progress">
 
+                <div class="progress-header">
 
+                    <span>
+                        Habit Progress
+                    </span>
 
-                            <div class="bar-container">
+                    <strong id="habitProgressText">
+                        3 / 4
+                    </strong>
 
-                                <div class="bar bar-7">
-                                </div>
+                </div>
 
-                                <span>
-                                    Sun
-                                </span>
+                <div class="progress-bar">
 
-                            </div>
-
-                        </div>
-
+                    <div
+                        class="progress-fill habit-progress-fill">
                     </div>
 
                 </div>
 
-            </section>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+          
+       
+            <!-- =====================================
+                 POMODORO + WEEKLY ANALYTICS
+            ====================================== -->
+
+            <section class="bottom-grid">
+        
+                <!-- ==========================================
+     POMODORO + STREAK SECTION
+========================================== -->
+
+<div class="timer-streak-row">
+
+    <!-- ======================================
+         POMODORO TIMER
+    ======================================= -->
+
+    <div class="dashboard-card pomodoro-card">
+
+        <div class="section-header">
+
+            <div>
+                <p class="card-label">
+                    FOCUS
+                </p>
+
+                <h2>
+                    Pomodoro Timer
+                </h2>
+            </div>
+
+            <i data-lucide="timer" class="pomodoro-icon"></i>
+
+        </div>
 
 
+        <div class="pomodoro-content">
+
+            <div class="timer-display" id="timerDisplay">
+                25:00
+            </div>
+
+            <p class="timer-status" id="timerStatus">
+                Ready to focus?
+            </p>
+
+        </div>
+
+
+        <div class="timer-controls">
+
+            <button
+                type="button"
+                id="startTimer">
+                Start
+            </button>
+
+            <button
+                type="button"
+                id="pauseTimer">
+                Pause
+            </button>
+
+            <button
+                type="button"
+                id="resetTimer">
+                Reset
+            </button>
+
+        </div>
+
+
+        <div class="pomodoro-sessions">
+
+            <span>
+                Sessions completed
+            </span>
+
+            <strong id="completedSessions">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================
+         DAILY STREAK
+    ======================================= -->
+
+    <div class="dashboard-card streak-card">
+
+        <div class="section-header">
+
+            <div>
+                <p class="card-label">
+                    CONSISTENCY
+                </p>
+
+                <h2>
+                    Daily Streak
+                </h2>
+            </div>
+
+            <div class="streak-icon">
+                🔥
+            </div>
+
+        </div>
+
+
+        <div class="streak-content">
+
+            <div class="current-streak">
+
+                <strong id="currentStreak">
+                    0
+                </strong>
+
+                <span>
+                    days
+                </span>
+
+            </div>
+
+
+            <p
+                class="streak-message"
+                id="streakMessage">
+
+                Start your streak today!
+
+            </p>
+
+        </div>
+
+
+        <div class="streak-week">
+
+            <div class="streak-day">
+                <span>M</span>
+                <div class="streak-dot"></div>
+            </div>
+
+            <div class="streak-day">
+                <span>T</span>
+                <div class="streak-dot"></div>
+            </div>
+
+            <div class="streak-day">
+                <span>W</span>
+                <div class="streak-dot"></div>
+            </div>
+
+            <div class="streak-day">
+                <span>T</span>
+                <div class="streak-dot"></div>
+            </div>
+
+            <div class="streak-day">
+                <span>F</span>
+                <div class="streak-dot"></div>
+            </div>
+
+            <div class="streak-day">
+                <span>S</span>
+                <div class="streak-dot"></div>
+            </div>
+
+            <div class="streak-day">
+                <span>S</span>
+                <div class="streak-dot"></div>
+            </div>
+
+        </div>
+
+
+        <div class="best-streak">
+
+            <span>
+                Best streak
+            </span>
+
+            <strong id="bestStreak">
+                0 days
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+           <!-- =================================
+     WEEKLY ANALYTICS
+================================== -->
+
+<div class="dashboard-card analytics-card">
+
+    <div class="section-header">
+
+        <div>
+            <p class="card-label">OVERVIEW</p>
+            <h2>Weekly Progress</h2>
+        </div>
+
+        <select class="week-select" id="weekSelect">
+            <option value="this">This Week</option>
+            <option value="last">Last Week</option>
+        </select>
+
+    </div>
+
+
+    <!-- ANALYTICS STATS -->
+
+    <div class="analytics-stats">
+
+        <div>
+            <span>Tasks</span>
+
+            <strong id="weeklyTasks">0</strong>
+
+            <small id="weeklyTasksLabel">
+                Completed
+            </small>
+        </div>
+
+
+        <div>
+            <span>Habits</span>
+
+            <strong id="weeklyHabits">0</strong>
+
+            <small id="weeklyHabitsLabel">
+                Completed
+            </small>
+        </div>
+
+
+        <div>
+            <span>Water</span>
+
+            <strong id="weeklyWater">0L</strong>
+
+            <small id="weeklyWaterLabel">
+                Avg. 0L
+            </small>
+        </div>
+
+
+        <div>
+            <span>Sleep</span>
+
+            <strong id="weeklySleep">0h</strong>
+
+            <small id="weeklySleepLabel">
+                Avg. 0h
+            </small>
+        </div>
+
+    </div>
+
+
+    <!-- CHART -->
+
+    <div class="chart">
+
+        <div class="chart-bars">
+
+            <div class="bar-container">
+                <div class="bar bar-1"></div>
+                <span>Mon</span>
+            </div>
+
+            <div class="bar-container">
+                <div class="bar bar-2"></div>
+                <span>Tue</span>
+            </div>
+
+            <div class="bar-container">
+                <div class="bar bar-3"></div>
+                <span>Wed</span>
+            </div>
+
+            <div class="bar-container">
+                <div class="bar bar-4"></div>
+                <span>Thu</span>
+            </div>
+
+            <div class="bar-container">
+                <div class="bar bar-5"></div>
+                <span>Fri</span>
+            </div>
+
+            <div class="bar-container">
+                <div class="bar bar-6"></div>
+                <span>Sat</span>
+            </div>
+
+            <div class="bar-container">
+                <div class="bar bar-7"></div>
+                <span>Sun</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
             <!-- =====================================
                  MOTIVATIONAL QUOTE

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Clover - Tasks</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Task Page CSS -->
+    <link rel="stylesheet" href="task.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         SIDEBAR
+    ================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            CLOVER
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="sidebar-link">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="task.html" class="sidebar-link active">
+                <i data-lucide="check-square"></i>
+                <span>Tasks</span>
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i data-lucide="repeat"></i>
+                <span>Habits</span>
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i data-lucide="droplets"></i>
+                <span>Water</span>
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i data-lucide="trending-up"></i>
+                <span>Progress</span>
+            </a>
+
+            <a href="#" class="sidebar-link">
+                <i data-lucide="timer"></i>
+                <span>Pomodoro</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="sidebar-link">
+                <i data-lucide="settings"></i>
+                <span>Settings</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================
+         MAIN CONTENT
+    ================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================
+             HERO
+        ================================== -->
+
+        <section class="task-hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    DAILY FOCUS
+                </p>
+
+                <h1>
+                    TASKS
+                </h1>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             MOVING TEXT STRIP
+        ================================== -->
+
+        <section class="marquee-section">
+
+            <div class="marquee-track">
+
+                <span>PLAN</span>
+                <span>FOCUS</span>
+                <span>COMPLETE</span>
+                <span>REPEAT</span>
+                <span>PLAN</span>
+                <span>FOCUS</span>
+                <span>COMPLETE</span>
+                <span>REPEAT</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             EDITORIAL STATEMENT
+        ================================== -->
+
+        <section class="editorial-section">
+
+            <div class="editorial-heading">
+                SMALL TASKS.
+                <br>
+                BIG MOMENTUM.
+            </div>
+
+            <div class="editorial-description">
+                Keep your day simple.
+                Focus on what matters and
+                move forward.
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             TASK WORKSPACE
+        ================================== -->
+
+        <section class="task-workspace">
+
+
+            <!-- TASK HEADER -->
+
+            <div class="workspace-header">
+
+                <div>
+                    <p class="section-label">
+                        YOUR DAY
+                    </p>
+
+                    <h2>
+                        Today's Tasks
+                    </h2>
+                </div>
+
+                <button
+                    class="new-task-button"
+                    id="addTaskBtn"
+                    type="button"
+                >
+                    <i data-lucide="plus"></i>
+                    New Task
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 FILTERS
+            ================================== -->
+
+            <div class="task-filters">
+
+                <button
+                    class="task-filter active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="task-filter"
+                    data-filter="today"
+                >
+                    Today
+                </button>
+
+                <button
+                    class="task-filter"
+                    data-filter="upcoming"
+                >
+                    Upcoming
+                </button>
+
+                <button
+                    class="task-filter"
+                    data-filter="completed"
+                >
+                    Completed
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 ADD TASK FORM
+            ================================== -->
+
+            <div
+                id="addTaskForm"
+                class="add-task-form"
+            >
+
+                <div class="form-header">
+
+                    <div>
+                        <p class="section-label">
+                            NEW TASK
+                        </p>
+
+                        <h3>
+                            Create a task
+                        </h3>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="closeTaskForm"
+                        class="close-task-button"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="task-input-group">
+
+                    <label for="taskInput">
+                        Task
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What do you want to accomplish?"
+                    >
+
+                </div>
+
+
+                <div class="task-options">
+
+                    <div class="task-option">
+
+                        <label for="taskDate">
+                            Date
+                        </label>
+
+                        <select id="taskDate">
+
+                            <option>
+                                Today
+                            </option>
+
+                            <option>
+                                Tomorrow
+                            </option>
+
+                            <option>
+                                This Week
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="task-option">
+
+                        <label for="taskCategory">
+                            Category
+                        </label>
+
+                        <select id="taskCategory">
+
+                            <option>
+                                Personal
+                            </option>
+
+                            <option>
+                                Fitness
+                            </option>
+
+                            <option>
+                                Health
+                            </option>
+
+                            <option>
+                                Productivity
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="saveTaskBtn"
+                    class="save-task-button"
+                >
+                    <i data-lucide="plus"></i>
+                    Add Task
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 TASK LIST
+            ================================== -->
+
+            <div class="task-list" id="taskList">
+
+
+                <!-- TASK 1 -->
+
+                <div class="task">
+
+                    <div class="task-left">
+
+                        <div
+                            class="task-check completed"
+                            data-task="Morning Workout"
+                        >
+                            ✓
+                        </div>
+
+                        <div class="task-details">
+
+                            <h3>
+                                Morning Workout
+                            </h3>
+
+                            <p>
+                                07:00 AM · Fitness
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <span class="task-status done">
+                        Done
+                    </span>
+
+                </div>
+
+
+                <!-- TASK 2 -->
+
+                <div class="task">
+
+                    <div class="task-left">
+
+                        <div
+                            class="task-check completed"
+                            data-task="Drink Water"
+                        >
+                            ✓
+                        </div>
+
+                        <div class="task-details">
+
+                            <h3>
+                                Drink Water
+                            </h3>
+
+                            <p>
+                                Health
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <span class="task-status done">
+                        Done
+                    </span>
+
+                </div>
+
+
+                <!-- TASK 3 -->
+
+                <div class="task">
+
+                    <div class="task-left">
+
+                        <div
+                            class="task-check"
+                            data-task="Complete DSA Assignment"
+                        ></div>
+
+                        <div class="task-details">
+
+                            <h3>
+                                Complete DSA Assignment
+                            </h3>
+
+                            <p>
+                                06:00 PM · Productivity
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <span class="task-status">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <!-- TASK 4 -->
+
+                <div class="task">
+
+                    <div class="task-left">
+
+                        <div
+                            class="task-check"
+                            data-task="Read 20 Pages"
+                        ></div>
+
+                        <div class="task-details">
+
+                            <h3>
+                                Read 20 Pages
+                            </h3>
+
+                            <p>
+                                Personal
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <span class="task-status">
+                        Pending
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================
+             PROGRESS
+        ================================== -->
+
+        <section class="task-progress-section">
+
+            <div class="progress-number">
+
+                <strong id="completedTaskCount">
+                    2
+                </strong>
+
+                <span>
+                    completed today
+                </span>
+
+            </div>
+
+
+            <div class="progress-line">
+
+                <div
+                    class="progress-line-fill"
+                    id="taskProgressFill"
+                ></div>
+
+            </div>
+
+
+            <div class="progress-meta">
+
+                <span>
+                    Daily progress
+                </span>
+
+                <strong id="taskProgressPercentage">
+                    50%
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             SECOND MOVING STRIP
+        ================================== -->
+
+        <section class="marquee-section dark-marquee">
+
+            <div class="marquee-track">
+
+                <span>BUILD YOUR ROUTINE</span>
+                <span>STAY CONSISTENT</span>
+                <span>KEEP MOVING</span>
+                <span>BUILD YOUR ROUTINE</span>
+                <span>STAY CONSISTENT</span>
+                <span>KEEP MOVING</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             FOOTER
+        ================================== -->
+
+
+            <footer class="site-footer">
+
+             <div class="footer-top">
+
+        <!-- CLOVER INTRO -->
+
+        <div class="footer-column footer-intro">
+
+            <p class="footer-label">
+                CLOVER
+            </p>
+
+            <p class="footer-description">
+                A simple space to build better routines,
+                stay consistent, and take care of yourself.
+            </p>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+
+        <div class="footer-column">
+
+            <p class="footer-label">
+                EXPLORE
+            </p>
+
+            <a href="index.html">
+                Dashboard
+            </a>
+
+            <a href="task.html">
+                Tasks
+            </a>
+
+            <a href="#">
+                Habits
+            </a>
+
+            <a href="#">
+                Progress
+            </a>
+
+        </div>
+
+
+        <!-- WELLNESS -->
+
+        <div class="footer-column">
+
+            <p class="footer-label">
+                WELLNESS
+            </p>
+
+            <a href="#">
+                Water
+            </a>
+
+            <a href="#">
+                Sleep
+            </a>
+
+            <a href="#">
+                Pomodoro
+            </a>
+
+        </div>
+
+
+        <!-- YOUR ROUTINE -->
+
+        <div class="footer-column">
+
+            <p class="footer-label">
+                YOUR ROUTINE
+            </p>
+
+            <p class="footer-routine">
+                Plan your day.<br>
+                Track your progress.<br>
+                Keep growing.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- GIANT CLOVER WORDMARK -->
+
+    <div class="footer-brand">
+        CLOVER
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 CLOVER
+        </span>
+
+        <span>
+            Better habits, daily.
+        </span>
+
+    </div>
+
+</footer>
+        
+                
+
+    </main>
+
+
+    <!-- =================================
+         LUCIDE
+    ================================== -->
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

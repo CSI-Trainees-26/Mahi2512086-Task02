@@ -2097,3 +2097,897 @@ a {
     }
 
 }
+/* =========================
+   ADD TASK FORM
+========================= */
+
+.add-task-form {
+    display: none;
+    margin-top: 18px;
+    padding: 24px;
+    border: 1px solid #e8e8e8;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Header */
+
+.add-task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 22px;
+}
+
+.add-task-header h3 {
+    margin: 4px 0 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.close-task-button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #f5f5f5;
+    font-size: 20px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Input */
+
+.task-input-group {
+    margin-bottom: 18px;
+}
+
+.task-input-group label,
+.task-option label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+}
+
+#taskInput,
+.task-option select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+
+    border: 1px solid #dedede;
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+#taskInput:focus,
+.task-option select:focus {
+    border-color: #999;
+    background: #ffffff;
+}
+
+
+/* Date + Category */
+
+.task-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Save Button */
+
+.save-task-button {
+    width: 100%;
+
+    padding: 13px 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #111111;
+    color: white;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    transition: 0.2s ease;
+}
+
+.save-task-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .task-options {
+        grid-template-columns: 1fr;
+    }
+
+    .add-task-form {
+        padding: 18px;
+    }
+
+}
+
+/* =========================
+   STREAK CARD
+   ========================= */
+
+.focus-streak-row .streak-card {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.focus-streak-row .streak-content {
+    margin-top: 20px;
+}
+
+/* Current streak number */
+.focus-streak-row .current-streak {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+}
+
+.focus-streak-row .current-streak strong {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.focus-streak-row .current-streak span {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Message */
+.focus-streak-row .streak-message {
+    margin: 8px 0 0;
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* Fire icon */
+.focus-streak-row .streak-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    background: #f5f5f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+ /* =========================
+   DAILY STREAK CARD
+========================= */
+
+.streak-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 320px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.streak-card .section-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.streak-card .card-label {
+    margin: 0 0 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.streak-card h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Fire icon */
+
+.streak-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    font-size: 25px;
+
+    flex-shrink: 0;
+}
+
+/* Main streak area */
+
+.streak-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.current-streak {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.current-streak strong {
+    font-size: 52px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.current-streak span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.streak-message {
+    margin: 8px 0 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Weekly streak */
+
+.streak-week {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 22px;
+}
+
+.streak-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    min-width: 28px;
+}
+
+.streak-day span {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.streak-dot {
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+/* Completed day */
+
+.streak-day.active .streak-dot {
+    transform: scale(1.05);
+}
+
+/* Best streak */
+
+.best-streak {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding-top: 16px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.best-streak span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.best-streak strong {
+    font-size: 14px;
+    font-weight: 700;
+} 
+
+
+
+/* =====================================
+   TASKS + HABITS SIDE BY SIDE
+===================================== */
+
+.tasks-habits-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+
+/* Both cards are independent blocks */
+
+.tasks-habits-row > .tasks-card,
+.tasks-habits-row > .habits-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+/* Add Task stays inside Tasks card */
+
+.tasks-card .add-task-button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Add Task form stays inside Tasks card */
+
+.tasks-card .add-task-form {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .tasks-habits-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================
+   POMODORO + STREAK SIDE BY SIDE
+========================================= */
+
+.timer-streak-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    align-items: stretch !important;
+}
+
+.timer-streak-row .pomodoro-card,
+.timer-streak-row .streak-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+
+/* STREAK */
+
+.timer-streak-row .streak-card {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 24px !important;
+}
+
+.timer-streak-row .streak-card .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.timer-streak-row .streak-content {
+    width: 100%;
+}
+
+.timer-streak-row .streak-week {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.timer-streak-row .streak-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.timer-streak-row .best-streak {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .timer-streak-row {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+:root {
+    --clover-green: #9CB19E;
+    --clover-green-dark: #718B78;
+    --clover-green-light: #E3EAE3;
+
+    --clover-bg: #F5F1E8;
+    --clover-card: #ffffff;
+
+    --clover-text: #252724;
+    --clover-muted: #777970;
+
+    --clover-border: #E5E2D9;
+}
+
+/* =========================================
+   POMODORO + STREAK ROW
+========================================= */
+
+.timer-streak-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.timer-streak-row > .dashboard-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   POMODORO CARD
+========================================= */
+
+.pomodoro-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+    padding: 24px;
+    box-sizing: border-box;
+
+    background: var(--clover-card);
+    color: var(--clover-text);
+    border: 1px solid var(--clover-border);
+    border-radius: 20px;
+}
+
+
+/* Header */
+
+.pomodoro-card .section-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.pomodoro-card .card-label {
+    margin: 0 0 6px;
+
+    color: var(--clover-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.pomodoro-card h2 {
+    margin: 0;
+
+    color: var(--clover-text);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* Lucide timer icon */
+
+.pomodoro-icon {
+    width: 25px;
+    height: 25px;
+
+    padding: 10px;
+
+    color: var(--clover-green-dark);
+    background: var(--clover-green-light);
+
+    border-radius: 12px;
+
+    stroke-width: 1.8;
+    box-sizing: content-box;
+}
+
+
+/* Timer area */
+
+.pomodoro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    width: 100%;
+
+    text-align: center;
+}
+
+.timer-display {
+    color: var(--clover-text);
+
+    font-size: 52px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.timer-status {
+    margin: 10px 0 0;
+
+    color: var(--clover-muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TIMER BUTTONS
+========================================= */
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.timer-controls button {
+    padding: 10px 18px;
+
+    color: var(--clover-text);
+    background: var(--clover-green-light);
+
+    border: 1px solid var(--clover-green);
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.timer-controls button:hover {
+    background: var(--clover-green);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+
+/* Start button */
+
+#startTimer {
+    color: #ffffff;
+    background: var(--clover-green-dark);
+    border-color: var(--clover-green-dark);
+}
+
+#startTimer:hover {
+    background: var(--clover-green);
+    border-color: var(--clover-green);
+}
+
+
+/* =========================================
+   COMPLETED SESSIONS
+========================================= */
+
+.pomodoro-sessions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 1px solid var(--clover-border);
+}
+
+.pomodoro-sessions span {
+    color: var(--clover-muted);
+    font-size: 13px;
+}
+
+.pomodoro-sessions strong {
+    color: var(--clover-green-dark);
+    font-size: 14px;
+}
+
+
+/* =========================================
+   STREAK CARD
+========================================= */
+
+.streak-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 320px;
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background: var(--clover-card);
+    color: var(--clover-text);
+
+    border: 1px solid var(--clover-border);
+    border-radius: 20px;
+}
+
+
+/* Header */
+
+.streak-card .section-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.streak-card .card-label {
+    margin: 0 0 6px;
+
+    color: var(--clover-muted);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.streak-card h2 {
+    margin: 0;
+
+    color: var(--clover-text);
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* Streak icon */
+
+.streak-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: var(--clover-green-dark);
+    background: var(--clover-green-light);
+
+    border-radius: 12px;
+
+    font-size: 21px;
+}
+
+
+/* Main streak */
+
+.streak-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.current-streak {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.current-streak strong {
+    color: var(--clover-text);
+
+    font-size: 52px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.current-streak span {
+    color: var(--clover-muted);
+    font-size: 15px;
+}
+
+.streak-message {
+    margin: 8px 0 0;
+
+    color: var(--clover-muted);
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   STREAK WEEK
+========================================= */
+
+.streak-week {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.streak-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.streak-day span {
+    color: var(--clover-muted);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.streak-dot {
+    width: 14px;
+    height: 14px;
+
+    background: transparent;
+
+    border: 2px solid var(--clover-green);
+    border-radius: 50%;
+
+    box-sizing: border-box;
+}
+
+
+/* Completed days */
+
+.streak-day.active .streak-dot {
+    background: var(--clover-green);
+    border-color: var(--clover-green);
+}
+
+
+/* =========================================
+   BEST STREAK
+========================================= */
+
+.best-streak {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding-top: 15px;
+
+    border-top: 1px solid var(--clover-border);
+}
+
+.best-streak span {
+    color: var(--clover-muted);
+    font-size: 13px;
+}
+
+.best-streak strong {
+    color: var(--clover-green-dark);
+    font-size: 14px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .timer-streak-row {
+        grid-template-columns: 1fr;
+    }
+
+    .pomodoro-card,
+    .streak-card {
+        min-height: 300px;
+    }
+
+    .timer-display,
+    .current-streak strong {
+        font-size: 46px;
+    }
+
+}
