@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clover - Habits</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="habits.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="sidebar-logo">CLOVER</div>
+
+        <div class="sidebar-nav">
+            <a class="sidebar-link" href="index.html"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+            <a class="sidebar-link" href="task.html"><i data-lucide="check-square"></i> Tasks</a>
+            <a class="sidebar-link active" href="habits.html"><i data-lucide="repeat"></i> Habits</a>
+            <a class="sidebar-link" href="#"><i data-lucide="droplet"></i> Water</a>
+            <a class="sidebar-link" href="#"><i data-lucide="trending-up"></i> Progress</a>
+            <a class="sidebar-link" href="#"><i data-lucide="timer"></i> Pomodoro</a>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a class="sidebar-link" href="#"><i data-lucide="settings"></i> Settings</a>
+        </div>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main-content">
+
+        <div class="task-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-label">DAILY RITUALS</p>
+                <h1>HABITS</h1>
+            </div>
+        </div>
+
+        <div class="marquee-section">
+            <div class="marquee-track">
+                <span>CONSISTENT</span><span>REPEAT</span><span>GROW</span><span>TRACK</span>
+                <span>CONSISTENT</span><span>REPEAT</span><span>GROW</span><span>TRACK</span>
+                <span>CONSISTENT</span><span>REPEAT</span><span>GROW</span><span>TRACK</span>
+                <span>CONSISTENT</span><span>REPEAT</span><span>GROW</span><span>TRACK</span>
+            </div>
+        </div>
+
+        <div class="habit-workspace">
+
+            <!-- STATS -->
+            <div class="stats-row">
+                <div class="stat-box"><strong>12</strong><span>CURRENT STREAK</span><small>Days in a row</small></div>
+                <div class="stat-box"><strong>24</strong><span>LONGEST STREAK</span><small>Personal best</small></div>
+                <div class="stat-box"><strong>68%</strong><span>THIS MONTH</span><small>18 of 30 days</small></div>
+                <div class="stat-box"><strong>6</strong><span>ACTIVE HABITS</span><small>Daily rituals</small></div>
+            </div>
+
+            <div class="workspace-header">
+                <div>
+                    <p class="section-label">TODAY • SEP 7, 2026</p>
+                    <h2>Your Rituals</h2>
+                </div>
+                <button class="new-task-button">+ New Habit</button>
+            </div>
+
+            <!-- HABIT CARDS -->
+            <div class="habit-grid">
+
+                <div class="habit-card">
+                    <div class="habit-top">
+                        <div class="habit-left">
+                            <div class="habit-icon"><i data-lucide="droplets"></i></div>
+                            <div class="habit-info"><h3>Water</h3><p>Drink 2L water daily</p></div>
+                        </div>
+                        <div class="habit-check"></div>
+                    </div>
+                    <div class="habit-meta"><span>🔥 7 day streak</span><span>12 times done</span></div>
+                    <div class="habit-progress"><div class="habit-progress-fill" style="width:85%"></div></div>
+                    <div class="habit-week"><span>Weekly 6/7</span><span>85%</span></div>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-top">
+                        <div class="habit-left">
+                            <div class="habit-icon"><i data-lucide="book-open"></i></div>
+                            <div class="habit-info"><h3>Read</h3><p>Read 10 pages</p></div>
+                        </div>
+                        <div class="habit-check completed"><i data-lucide="check" style="width:14px; height:14px;"></i></div>
+                    </div>
+                    <div class="habit-meta"><span>🔥 18 day streak</span><span>22 times done</span></div>
+                    <div class="habit-progress"><div class="habit-progress-fill" style="width:100%"></div></div>
+                    <div class="habit-week"><span>Weekly 7/7</span><span>100%</span></div>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-top">
+                        <div class="habit-left">
+                            <div class="habit-icon"><i data-lucide="brain"></i></div>
+                            <div class="habit-info"><h3>Meditate</h3><p>10 min mindfulness</p></div>
+                        </div>
+                        <div class="habit-check"></div>
+                    </div>
+                    <div class="habit-meta"><span>🔥 2 day streak</span><span>8 times done</span></div>
+                    <div class="habit-progress"><div class="habit-progress-fill" style="width:28%"></div></div>
+                    <div class="habit-week"><span>Weekly 2/7</span><span>28%</span></div>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-top">
+                        <div class="habit-left">
+                            <div class="habit-icon"><i data-lucide="footprints"></i></div>
+                            <div class="habit-info"><h3>Run</h3><p>2km walk/run</p></div>
+                        </div>
+                        <div class="habit-check"></div>
+                    </div>
+                    <div class="habit-meta"><span>🔥 5 day streak</span><span>15 times done</span></div>
+                    <div class="habit-progress"><div class="habit-progress-fill" style="width:71%"></div></div>
+                    <div class="habit-week"><span>Weekly 5/7</span><span>71%</span></div>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-top">
+                        <div class="habit-left">
+                            <div class="habit-icon"><i data-lucide="moon"></i></div>
+                            <div class="habit-info"><h3>Sleep</h3><p>8h sleep goal</p></div>
+                        </div>
+                        <div class="habit-check completed"><i data-lucide="check" style="width:14px; height:14px;"></i></div>
+                    </div>
+                    <div class="habit-meta"><span>🔥 12 day streak</span><span>20 times done</span></div>
+                    <div class="habit-progress"><div class="habit-progress-fill" style="width:92%"></div></div>
+                    <div class="habit-week"><span>Weekly 6/7</span><span>92%</span></div>
+                </div>
+
+                <div class="habit-card">
+                    <div class="habit-top">
+                        <div class="habit-left">
+                            <div class="habit-icon"><i data-lucide="notebook-pen"></i></div>
+                            <div class="habit-info"><h3>Journal</h3><p>Write 3 lines</p></div>
+                        </div>
+                        <div class="habit-check"></div>
+                    </div>
+                    <div class="habit-meta"><span>🔥 3 day streak</span><span>10 times done</span></div>
+                    <div class="habit-progress"><div class="habit-progress-fill" style="width:42%"></div></div>
+                    <div class="habit-week"><span>Weekly 3/7</span><span>42%</span></div>
+                </div>
+
+            </div>
+
+            <!-- FIXED LAYOUT - NO EMPTY SPACE -->
+            <div class="bottom-wrapper">
+
+                <div class="calendar-section">
+
+                    <div class="calendar-header">
+                        <div>
+                            <p class="section-label">SEPTEMBER 2026 • CONSISTENCY MAP</p>
+                            <h3>Color = How many habits done</h3>
+                        </div>
+                        <div class="calendar-legend">
+                            <span>Less</span>
+                            <div class="legend-box level-0"></div>
+                            <div class="legend-box level-1"></div>
+                            <div class="legend-box level-2"></div>
+                            <div class="legend-box level-3"></div>
+                            <div class="legend-box level-4"></div>
+                            <div class="legend-box level-6"></div>
+                            <span>More</span>
+                        </div>
+                    </div>
+
+                    <div class="calendar-weekdays">
+                        <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+                    </div>
+
+                    <div class="calendar-grid">
+                        <div class="calendar-day level-6"><strong>1</strong><small>6/6</small></div>
+                        <div class="calendar-day level-4"><strong>2</strong><small>5/6</small></div>
+                        <div class="calendar-day level-6"><strong>3</strong><small>6/6</small></div>
+                        <div class="calendar-day level-3"><strong>4</strong><small>3/6</small></div>
+                        <div class="calendar-day level-6"><strong>5</strong><small>6/6</small></div>
+                        <div class="calendar-day level-0"><strong>6</strong><small>0/6</small></div>
+                        <div class="calendar-day level-0"><strong>7</strong><small>0/6</small></div>
+
+                        <div class="calendar-day level-4"><strong>8</strong><small>4/6</small></div>
+                        <div class="calendar-day level-6"><strong>9</strong><small>6/6</small></div>
+                        <div class="calendar-day level-2"><strong>10</strong><small>2/6</small></div>
+                        <div class="calendar-day level-6"><strong>11</strong><small>6/6</small></div>
+                        <div class="calendar-day level-6"><strong>12</strong><small>6/6</small></div>
+                        <div class="calendar-day level-6"><strong>13</strong><small>6/6</small></div>
+                        <div class="calendar-day level-1"><strong>14</strong><small>1/6</small></div>
+
+                        <div class="calendar-day level-6"><strong>15</strong><small>6/6</small></div>
+                        <div class="calendar-day level-6"><strong>16</strong><small>6/6</small></div>
+                        <div class="calendar-day level-6"><strong>17</strong><small>6/6</small></div>
+                        <div class="calendar-day level-4"><strong>18</strong><small>5/6</small></div>
+                        <div class="calendar-day level-3"><strong>19</strong><small>3/6</small></div>
+                        <div class="calendar-day level-6"><strong>20</strong><small>6/6</small></div>
+                        <div class="calendar-day level-0"><strong>21</strong><small>0/6</small></div>
+
+                        <div class="calendar-day level-6"><strong>22</strong><small>6/6</small></div>
+                        <div class="calendar-day level-6"><strong>23</strong><small>6/6</small></div>
+                        <div class="calendar-day level-6"><strong>24</strong><small>6/6</small></div>
+                        <div class="calendar-day level-6"><strong>25</strong><small>6/6</small></div>
+                        <div class="calendar-day level-6"><strong>26</strong><small>6/6</small></div>
+                        <div class="calendar-day level-2"><strong>27</strong><small>2/6</small></div>
+                        <div class="calendar-day level-1"><strong>28</strong><small>1/6</small></div>
+
+                        <div class="calendar-day level-0"><strong>29</strong><small>0/6</small></div>
+                        <div class="calendar-day level-0"><strong>30</strong><small>0/6</small></div>
+                        <div class="calendar-day empty"></div>
+                        <div class="calendar-day empty"></div>
+                        <div class="calendar-day empty"></div>
+                        <div class="calendar-day empty"></div>
+                        <div class="calendar-day empty"></div>
+                    </div>
+                </div>
+
+                <div class="insights-section">
+                    <div class="insight-card best">
+                        <p class="section-label">MOST CONSISTENT</p>
+                        <h4><i data-lucide="book-open" style="width:16px; height:16px;"></i> Read — 18 days</h4>
+                        <p>You haven't missed a single day. Keep it up!</p>
+                    </div>
+                    <div class="insight-card attention">
+                        <p class="section-label">NEEDS ATTENTION</p>
+                        <h4><i data-lucide="brain" style="width:16px; height:16px;"></i> Meditate — 2/7 days</h4>
+                        <p>You skipped 5 days this week. Try morning slot.</p>
+                    </div>
+                    <div class="insight-card motivation">
+                        <p class="section-label">MOTIVATION</p>
+                        <h4>You're 12 days away from beating your record!</h4>
+                        <p>Longest was 24 days. Current is 12. You can do it.</p>
+                        <div class="mini-progress"><div style="width:50%"></div></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="task-progress-section">
+                <div class="progress-number"><strong>12</strong><span>DAYS STREAK</span></div>
+                <div class="progress-line"><div class="progress-line-fill" style="width:68%"></div></div>
+                <div class="progress-meta"><span>KEEP GOING • WEEKLY PROGRESS</span><span><strong>68%</strong></span></div>
+                <div class="week-row">
+                    <div>MON <span class="pill done"><i data-lucide="check" style="width:12px; height:12px;"></i></span></div>
+                    <div>TUE <span class="pill done"><i data-lucide="check" style="width:12px; height:12px;"></i></span></div>
+                    <div>WED <span class="pill done"><i data-lucide="check" style="width:12px; height:12px;"></i></span></div>
+                    <div>THU <span class="pill done"><i data-lucide="check" style="width:12px; height:12px;"></i></span></div>
+                    <div>FRI <span class="pill done"><i data-lucide="check" style="width:12px; height:12px;"></i></span></div>
+                    <div>SAT <span class="pill"></span></div>
+                    <div>SUN <span class="pill today"></span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <p class="footer-label">CLOVER</p>
+                    <p class="footer-description">A simple space to build better daily routines, stay consistent, and grow with small steps every day.</p>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-label">YOUR ROUTINE</p>
+                    <p class="footer-routine">Plan your day<br>Track your progress<br>Keep growing</p>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-label">EXPLORE</p>
+                    <a href="#">Dashboard</a><a href="#">Tasks</a><a href="#">Habits</a><a href="#">Progress</a>
+                </div>
+            </div>
+            <div class="footer-brand">CLOVER</div>
+            <div class="footer-bottom">
+                <span>© 2024 CLOVER • BUILT FOR CONSISTENCY</span>
+                <span>v2.1 • PRIVACY • SUPPORT</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="habits.js"></script>
+</body>
+</html>

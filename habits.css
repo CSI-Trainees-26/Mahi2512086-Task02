@@ -1,0 +1,758 @@
+/* =========================================
+   CLOVER - HABITS PAGE - COMPLETE FINAL
+   Big Ritual Cards + Big Calendar Text + Equal Layout
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F3F0E8;
+    color: #171717;
+    font-family: "Inter", sans-serif;
+}
+
+/* ========== SIDEBAR ========== */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 230px;
+    height: 100vh;
+    padding: 30px 20px;
+    background: #F3F0E8;
+    border-right: 1px solid #D9D6CC;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.sidebar-logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.07em;
+    margin-bottom: 55px;
+    padding-left: 10px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
+    color: #55554F;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.sidebar-link svg,
+.sidebar-link i {
+    width: 18px;
+    height: 18px;
+}
+
+.sidebar-link:hover {
+    color: #171717;
+}
+
+.sidebar-link.active {
+    background: #DCE2D5;
+    color: #3F5138;
+}
+
+/* ========== MAIN CONTENT ========== */
+
+.main-content {
+    margin-left: 230px;
+    min-height: 100vh;
+}
+
+/* ========== HERO ========== */
+
+.task-hero {
+    position: relative;
+    min-height: 440px;
+    margin: 0;
+    background-image: url("images/imag19.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.05)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 55px;
+    color: #FFFFFF;
+}
+
+.hero-label {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: clamp(70px, 11vw, 150px);
+    line-height: 0.82;
+    font-weight: 800;
+    letter-spacing: -0.085em;
+}
+
+/* ========== MARQUEE ========== */
+
+.marquee-section {
+    width: 100%;
+    overflow: hidden;
+    background: #3F5138;
+    color: #F3F0E8;
+    border-top: 1px solid #171717;
+    border-bottom: 1px solid #171717;
+    padding: 13px 0;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 22s linear infinite;
+}
+
+.marquee-track span {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    white-space: nowrap;
+    margin-right: 50px;
+}
+
+.marquee-track span::after {
+    content: "•";
+    margin-left: 50px;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ========== WORKSPACE ========== */
+
+.habit-workspace {
+    padding: 40px 5vw 0;
+}
+
+/* ========== STATS ROW ========== */
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+.stat-box {
+    background: #FFFFFF;
+    border: 1px solid #D9D6CC;
+    padding: 20px 22px;
+}
+
+.stat-box strong {
+    display: block;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.stat-box span {
+    display: block;
+    margin-top: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #3F5138;
+}
+
+.stat-box small {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    color: #77776F;
+}
+
+/* ========== WORKSPACE HEADER ========== */
+
+.workspace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #77776F;
+    margin: 0 0 6px;
+}
+
+.workspace-header h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.new-task-button {
+    background: #171717;
+    color: #F3F0E8;
+    border: 1px solid #171717;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ========== YOUR RITUALS - BIGGER CARDS ========== */
+
+.habit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.habit-card {
+    background: #FFFFFF;
+    border: 1px solid #D9D6CC;
+    padding: 28px;
+    min-height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s ease;
+}
+
+.habit-card:hover {
+    border-color: #171717;
+}
+
+.habit-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.habit-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.habit-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #DCE2D5;
+    display: grid;
+    place-items: center;
+}
+
+.habit-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #3F5138;
+}
+
+.habit-info h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.habit-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #77776F;
+}
+
+.habit-check {
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid #77776F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.habit-check.completed {
+    background: #3F5138;
+    border-color: #3F5138;
+    color: #FFFFFF;
+}
+
+.habit-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #77776F;
+}
+
+.habit-progress {
+    width: 100%;
+    height: 5px;
+    background: #F3F0E8;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+.habit-progress-fill {
+    height: 100%;
+    background: #3F5138;
+    border-radius: 10px;
+}
+
+.habit-week {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #9A9A94;
+}
+
+/* ========== BOTTOM WRAPPER - FIXES EMPTY SPACE + EQUAL HEIGHT ========== */
+
+.bottom-wrapper {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 20px;
+    margin-top: 35px;
+    align-items: stretch;
+}
+
+.bottom-wrapper .calendar-section {
+    margin-top: 0;
+    max-width: 100%;
+    height: 100%;
+}
+
+.bottom-wrapper .insights-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 0;
+    height: 100%;
+}
+
+.bottom-wrapper .insight-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* ========== CALENDAR - BIGGER TEXT ========== */
+
+.calendar-section {
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid #D9D6CC;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.calendar-header h3 {
+    margin: 6px 0 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #55554F;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    border: 1px solid #D9D6CC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-weight: 500;
+    padding: 6px;
+}
+
+.calendar-day strong {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.calendar-day small {
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.calendar-day.empty {
+    border: none;
+    background: transparent;
+}
+
+.level-0 {
+    background: #FFFFFF;
+}
+
+.level-1 {
+    background: #E8EBE3;
+}
+
+.level-2 {
+    background: #DCE2D5;
+}
+
+.level-3 {
+    background: #A8B99E;
+    color: #FFFFFF;
+}
+
+.level-4 {
+    background: #6B8560;
+    color: #FFFFFF;
+}
+
+.level-6 {
+    background: #3F5138;
+    color: #FFFFFF;
+}
+
+.legend-box {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #D9D6CC;
+}
+
+.calendar-legend {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: #55554F;
+    font-weight: 500;
+}
+
+/* ========== INSIGHTS ========== */
+
+.insight-card {
+    background: #FFFFFF;
+    border: 1px solid #D9D6CC;
+    padding: 22px;
+}
+
+.insight-card h4 {
+    margin: 8px 0 6px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.insight-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #55554F;
+}
+
+.insight-card.best {
+    border-left: 4px solid #3F5138;
+}
+
+.insight-card.attention {
+    border-left: 4px solid #C2A47A;
+}
+
+.insight-card.motivation {
+    background: #171717;
+    color: #F3F0E8;
+    border-color: #171717;
+}
+
+.insight-card.motivation p {
+    color: #9A9A94;
+}
+
+.insight-card.motivation h4 {
+    color: #F3F0E8;
+}
+
+.mini-progress {
+    width: 100%;
+    height: 3px;
+    background: rgba(220, 226, 213, 0.18);
+    margin-top: 12px;
+}
+
+.mini-progress div {
+    height: 100%;
+    background: #DCE2D5;
+}
+
+/* ========== STREAK SECTION ========== */
+
+.task-progress-section {
+    margin-top: 40px;
+    padding: 60px;
+    background: #171717;
+    color: #F3F0E8;
+}
+
+.progress-number {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.progress-number strong {
+    font-size: clamp(60px, 8vw, 90px);
+    line-height: 0.8;
+    font-weight: 800;
+    letter-spacing: -0.08em;
+}
+
+.progress-number span {
+    font-size: 13px;
+    color: #DCE2D5;
+}
+
+.progress-line {
+    width: 100%;
+    height: 3px;
+    margin-top: 35px;
+    background: rgba(220, 226, 213, 0.18);
+}
+
+.progress-line-fill {
+    height: 100%;
+    background: #DCE2D5;
+}
+
+.progress-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+    font-size: 11px;
+    color: #9A9A94;
+}
+
+.progress-meta strong {
+    color: #DCE2D5;
+}
+
+.week-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.week-row div {
+    font-size: 10px;
+}
+
+.pill {
+    display: grid;
+    place-items: center;
+    width: 62px;
+    height: 28px;
+    margin-top: 10px;
+    border-radius: 100px;
+    background: #F3F0E8;
+    color: #171717;
+    font-size: 11px;
+}
+
+.pill.done {
+    background: #3F5138;
+    color: #FFFFFF;
+}
+
+.pill.today {
+    background: transparent;
+    border: 1px dashed #DCE2D5;
+    color: #DCE2D5;
+}
+
+/* ========== FOOTER ========== */
+
+.site-footer {
+    padding: 65px 5vw 0;
+    background: #F3F0E8;
+    overflow: hidden;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #D9D6CC;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-label {
+    margin: 0 0 10px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+.footer-description {
+    margin: 0;
+    max-width: 180px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #77776F;
+}
+
+.footer-routine {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #77776F;
+}
+
+.footer-column a {
+    color: #55554F;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #171717;
+}
+
+.footer-brand {
+    margin-top: 65px;
+    margin-left: -1vw;
+    font-size: clamp(100px, 20vw, 300px);
+    line-height: 0.72;
+    font-weight: 800;
+    letter-spacing: -0.095em;
+    white-space: nowrap;
+    color: #171717;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0 22px;
+    font-size: 10px;
+    color: #77776F;
+    letter-spacing: 0.04em;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 900px) {
+
+    .habit-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bottom-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #D9D6CC;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .habit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        font-size: 27vw;
+    }
+
+}
