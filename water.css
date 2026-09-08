@@ -113,6 +113,24 @@
     font-size: 22vw;
   }
 }
+/* ===== WATER MARQUEE - FIX TO BLUE #2f4a5a ===== */
+.marquee-section{
+  background: #2f4a5a !important;
+  border-top: 1px solid #2f4a5a !important;
+  border-bottom: 1px solid #2f4a5a !important;
+}
+
+.marquee-track span{
+  color: #E8F1F5 !important; /* light blue-white for contrast */
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+/* the dots between words */
+.marquee-track span::after{
+  content: " • ";
+  color: #8AA5B5 !important;
+}
 
 @media (max-width: 480px){
   .stats-row{
