@@ -639,11 +639,10 @@ body {
     border: 1px dashed #DCE2D5;
     color: #DCE2D5;
 }
-
-/* ========== FOOTER ========== */
+/* ========== FOOTER - COMPACT ========== */
 
 .site-footer {
-    padding: 65px 5vw 0;
+    padding: 30px 5vw 0; /* was 65px, now 30px */
     background: #F3F0E8;
     overflow: hidden;
 }
@@ -651,19 +650,19 @@ body {
 .footer-top {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 50px;
-    padding-bottom: 70px;
+    gap: 20px; /* was 50px */
+    padding-bottom: 25px; /* was 70px */
     border-bottom: 1px solid #D9D6CC;
 }
 
 .footer-column {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px; /* was 8px */
 }
 
 .footer-label {
-    margin: 0 0 10px;
+    margin: 0 0 6px;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -672,35 +671,31 @@ body {
 .footer-description {
     margin: 0;
     max-width: 180px;
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 12px; /* was 13px */
+    line-height: 1.4; /* was 1.5 */
     color: #77776F;
 }
 
 .footer-routine {
     margin: 0;
-    font-size: 13px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.5;
     color: #77776F;
 }
 
 .footer-column a {
     color: #55554F;
-    font-size: 12px;
+    font-size: 11px;
     text-decoration: none;
 }
 
-.footer-column a:hover {
-    color: #171717;
-}
-
 .footer-brand {
-    margin-top: 65px;
-    margin-left: -1vw;
-    font-size: clamp(100px, 20vw, 300px);
-    line-height: 0.72;
-    font-weight: 800;
-    letter-spacing: -0.095em;
+    margin-top: 20px; /* was 65px - THIS is the main height saver */
+    margin-left: 0;
+    font-size: clamp(60px, 12vw, 140px); /* was up to 300px */
+    line-height: 0.9;
+    font-weight: 600; /* was 800 */
+    letter-spacing: -0.04em;
     white-space: nowrap;
     color: #171717;
 }
@@ -709,11 +704,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 0 22px;
-    font-size: 10px;
+    padding: 10px 0 12px; /* was 18px 0 22px */
+    font-size: 9px;
     color: #77776F;
-    letter-spacing: 0.04em;
 }
+.footer-brand {
+    margin-top: 20px;
+    margin-left: 0;
+    font-size: clamp(60px, 12vw, 140px);
+    line-height: 0.9;
+    font-weight: 700; /* was 600, 700 is bold but not super black like 800 */
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+    color: #171717;
+}
+
 
 /* ========== RESPONSIVE ========== */
 

@@ -1,0 +1,133 @@
+/* =========================================
+   CLOVER - WATER PAGE - RESPONSIVE
+   Same spec as habits.css, blue accent
+========================================= */
+
+/* Hero - water image */
+.water-hero{
+  background-image: url("https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=1400") !important;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Sidebar active = blue tint */
+.sidebar-link.active{
+  background: #D5E2E6 !important;
+  color: #2F4A5A !important;
+}
+
+/* Stat label blue */
+.stat-box span{
+  color: #3B6B7A !important;
+}
+
+/* Card hover blue */
+.habit-card:hover{
+  border-color: #3B6B7A !important;
+}
+
+/* Icon bg blue */
+.habit-icon{
+  background: #D5E2E6 !important;
+  color: #2F4A5A !important;
+}
+
+/* Progress blue */
+.habit-progress-fill{
+  background: #3B6B7A !important;
+}
+
+/* Calendar - blue levels */
+.level-0{ background:#FFFFFF !important; }
+.level-1{ background:#E6EFF3 !important; }
+.level-2{ background:#C9DCE8 !important; }
+.level-3{ background:#8AB6D1 !important; color:#FFFFFF !important; }
+.level-4{ background:#5A8FB0 !important; color:#FFFFFF !important; }
+.level-6{ background:#2F4A5A !important; color:#FFFFFF !important; }
+
+/* Insights */
+.insight-card.best{
+  border-left: 4px solid #3B6B7A !important;
+}
+.task-progress-section .progress-line-fill{
+  background: #8AB6D1 !important;
+}
+.task-progress-section .pill.done{
+  background: #3B6B7A !important;
+}
+
+/* ===== RESPONSIVE - Same as your habits.css + extra ===== */
+
+@media (max-width: 900px){
+  .habit-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .stats-row{
+    grid-template-columns: 1fr 1fr;
+  }
+  .bottom-wrapper{
+    grid-template-columns: 1fr;
+  }
+  .task-progress-section{
+    padding: 40px;
+  }
+}
+
+@media (max-width: 700px){
+  .sidebar{
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #D9D6CC;
+  }
+  .main-content{
+    margin-left: 0;
+  }
+  .habit-grid{
+    grid-template-columns: 1fr;
+  }
+  .stats-row{
+    grid-template-columns: 1fr 1fr;
+  }
+  .task-hero{
+    min-height: 320px;
+  }
+  .hero-content{
+    padding: 28px;
+  }
+  .hero-content h1{
+    font-size: 70px;
+  }
+  .task-progress-section{
+    padding: 28px;
+  }
+  .week-row{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .pill{
+    width: 52px;
+  }
+  .footer-brand{
+    font-size: 22vw;
+  }
+}
+
+@media (max-width: 480px){
+  .stats-row{
+    grid-template-columns: 1fr;
+  }
+  .habit-workspace{
+    padding: 20px 4vw 0;
+  }
+  .calendar-grid{
+    gap: 4px;
+  }
+  .calendar-day strong{
+    font-size: 13px;
+  }
+  .calendar-day small{
+    font-size: 9px;
+  }
+}

@@ -11,10 +11,13 @@ const waterProgress=document.querySelector(".water-progress");
 
 let waterAmount= Number(localStorage.getItem("waterAmount")) || 1250; // Default to 1250 if not set
 
+
+
 function updateWaterAmount() {
 
     //display current water status//
     waterAmountElement.textContent = waterAmount.toLocaleString(); // Format with commas
+
 
     //calculate progress percentage//
     const progressPercentage = Math.min(
@@ -150,7 +153,6 @@ function setupTask(task) {
     });
 }
 
-
 // ====================
 // SETUP EXISTING TASKS
 // ====================
@@ -161,7 +163,6 @@ tasks.forEach(function (task) {
     setupTask(task);
 });
 
-
 // ====================
 // ADD NEW TASK
 // ====================
@@ -170,7 +171,6 @@ const addTaskForm = document.getElementById("addTaskForm");
 const taskInput = document.getElementById("taskInput");
 const saveTaskBtn = document.getElementById("saveTaskBtn");
 const closeTaskForm = document.getElementById("closeTaskForm");
-
 
 // ====================
 // OPEN FORM
@@ -189,7 +189,6 @@ if (addTaskBtn) {
     });
 }
 
-
 // ====================
 // CLOSE FORM
 // ====================
@@ -206,7 +205,6 @@ if (closeTaskForm) {
         }
     });
 }
-
 
 // ====================
 // SAVE NEW TASK
@@ -270,8 +268,6 @@ if (saveTaskBtn) {
         addTaskForm.style.display = "none";
     });
 }
-
-
 
 // ==================================================
 // HABIT TRACKER
@@ -363,6 +359,7 @@ habits.forEach(function (habit) {
 // ====================
 
 updateHabitProgress();
+
 
 
 /* =========================================
@@ -558,7 +555,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-
     /* =========================================
        BUTTON EVENTS
     ========================================= */
@@ -577,7 +573,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "click",
         resetPomodoro
     );
-
 
     /* =========================================
        INITIAL DISPLAY
@@ -618,7 +613,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-
     /* =========================================
        GET SAVED COMPLETION DATES
     ========================================= */
@@ -627,7 +621,6 @@ document.addEventListener("DOMContentLoaded", function () {
         JSON.parse(
             localStorage.getItem("streakCompletedDates")
         ) || [];
-
 
     /* =========================================
        GET TODAY
@@ -644,7 +637,6 @@ document.addEventListener("DOMContentLoaded", function () {
             String(today.getDate()).padStart(2, "0");
     }
 
-
     /* =========================================
        DATE HELPERS
     ========================================= */
@@ -658,7 +650,6 @@ document.addEventListener("DOMContentLoaded", function () {
             String(date.getDate()).padStart(2, "0");
     }
 
-
     function getPreviousDate(dateString) {
 
         const date = new Date(dateString + "T00:00:00");
@@ -667,7 +658,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return dateToString(date);
     }
-
 
     /* =========================================
        CALCULATE CURRENT STREAK
@@ -690,7 +680,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
-
         while (completedDates.includes(checkDate)) {
 
             streak++;
@@ -699,10 +688,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
-
         return streak;
     }
-
 
     /* =========================================
        CALCULATE BEST STREAK
@@ -714,14 +701,11 @@ document.addEventListener("DOMContentLoaded", function () {
             return 0;
         }
 
-
         const dates = [...new Set(completedDates)]
             .sort();
 
-
         let best = 1;
         let current = 1;
-
 
         for (let i = 1; i < dates.length; i++) {
 
@@ -731,11 +715,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const currentDate =
                 new Date(dates[i] + "T00:00:00");
 
-
             const difference =
                 (currentDate - previousDate) /
                 (1000 * 60 * 60 * 24);
-
 
             if (difference === 1) {
 
@@ -752,10 +734,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-
         return best;
     }
-
 
     /* =========================================
        UPDATE STREAK DISPLAY
@@ -810,7 +790,6 @@ document.addEventListener("DOMContentLoaded", function () {
         updateWeek();
     }
 
-
     /* =========================================
        UPDATE WEEKLY DOTS
     ========================================= */
@@ -837,7 +816,6 @@ document.addEventListener("DOMContentLoaded", function () {
             today.getDate() + difference
         );
 
-
         streakDays.forEach(function (dayElement, index) {
 
             const date =
@@ -847,14 +825,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 monday.getDate() + index
             );
 
-
             const dateString =
                 dateToString(date);
 
-
             const dot =
                 dayElement.querySelector(".streak-dot");
-
 
             if (
                 completedDates.includes(dateString)
@@ -878,8 +853,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     }
-
-
     /* =========================================
        MARK TODAY AS COMPLETED
     ========================================= */
@@ -887,7 +860,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.completeToday = function () {
 
         const today = getToday();
-
 
         if (!completedDates.includes(today)) {
 
@@ -900,10 +872,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
-
         updateStreak();
     };
-
 
     /* =========================================
        INITIALIZE
@@ -931,7 +901,6 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Weekly Progress: Required elements are missing.");
         return;
     }
-
 
     // ==========================================
     // DATE HELPERS
@@ -975,7 +944,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
     // ==========================================
     // GET HABIT COMPLETION DATA
     // ==========================================
@@ -987,7 +955,6 @@ document.addEventListener("DOMContentLoaded", function () {
         ) || [];
 
     }
-
 
     // ==========================================
     // GET WEEK START
@@ -1006,11 +973,8 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
         }
-
         return monday;
-
     }
-
 
     // ==========================================
     // UPDATE WEEKLY PROGRESS
@@ -1028,11 +992,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let taskCount = 0;
         let habitCount = 0;
 
-
-        // ------------------------------------------
-        // DAILY CHART
-        // ------------------------------------------
-
         bars.forEach(function (bar, index) {
 
             const currentDate = new Date(monday);
@@ -1044,32 +1003,22 @@ document.addEventListener("DOMContentLoaded", function () {
             const dateString =
                 dateToString(currentDate);
 
-
             const tasksForDay =
                 taskDates.filter(
                     date => date === dateString
                 ).length;
-
 
             const habitsForDay =
                 habitDates.filter(
                     date => date === dateString
                 ).length;
 
-
             const totalForDay =
                 tasksForDay + habitsForDay;
-
 
             taskCount += tasksForDay;
 
             habitCount += habitsForDay;
-
-
-            // --------------------------------------
-            // BAR HEIGHT
-            // --------------------------------------
-
             const maxHeight = 100;
 
             const barHeight =
@@ -1077,16 +1026,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     totalForDay * 15,
                     maxHeight
                 );
-
-
             bar.style.height =
                 barHeight + "%";
-
-
-            // --------------------------------------
-            // ACTIVE BAR
-            // --------------------------------------
-
             if (totalForDay > 0) {
 
                 bar.classList.add("active");
@@ -1098,8 +1039,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         });
-
-
         // ==========================================
         // UPDATE TOTALS
         // ==========================================
@@ -1110,7 +1049,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
     // ==========================================
     // WEEK SELECT
     // ==========================================
@@ -1120,13 +1058,11 @@ document.addEventListener("DOMContentLoaded", function () {
         updateWeeklyProgress
     );
 
-
     // ==========================================
     // INITIAL UPDATE
     // ==========================================
 
     updateWeeklyProgress();
-
 
     // ==========================================
     // MAKE AVAILABLE TO OTHER JS

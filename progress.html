@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clover - Progress</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="habits.css">
+  <link rel="stylesheet" href="progress.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-logo">CLOVER</div>
+  <div class="sidebar-nav">
+    <a class="sidebar-link" href="index.html">⊞ Dashboard</a>
+    <a class="sidebar-link" href="task.html">☑ Tasks</a>
+    <a class="sidebar-link" href="habits.html">↻ Habits</a>
+    <a class="sidebar-link" href="water.html">💧 Water</a>
+    <a class="sidebar-link active" href="#">↗ Progress</a>
+    <a class="sidebar-link" href="timer.html">◷ Pomodoro</a>
+  </div>
+  <div class="sidebar-bottom">
+    <a class="sidebar-link" href="settings.html">⚙ Settings</a>
+  </div>
+</div>
+
+<div class="main-content">
+
+  <section class="task-hero progress-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">YOUR JOURNEY</p>
+      <h1>PROGRESS</h1>
+    </div>
+  </section>
+
+  <div class="marquee-section progress-marquee">
+    <div class="marquee-track">
+      <span>7-DAY STREAK ACTIVE</span><span>+12% VS LAST MONTH</span>
+      <span>NEW BADGE: CONSISTENCY KING UNLOCKED</span>
+      <span>128 TASKS COMPLETED THIS YEAR</span>
+      <span>7-DAY STREAK ACTIVE</span><span>+12% VS LAST MONTH</span>
+    </div>
+  </div>
+
+  <div class="progress-workspace">
+
+    <!-- TOP -->
+    <div class="progress-top">
+
+      <div class="card overall-card">
+        <div class="card-head">
+          <h3>Overall Progress</h3>
+          <small>Updated today • September 2026</small>
+        </div>
+        <div class="circle-wrap">
+          <svg viewBox="0 0 200 200" class="progress-ring">
+            <circle cx="100" cy="100" r="85" class="bg"></circle>
+            <circle cx="100" cy="100" r="85" class="fg" stroke-dasharray="534" stroke-dashoffset="150"></circle>
+          </svg>
+          <div class="circle-text">
+            <strong>72%</strong>
+            <span>of yearly goal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-stack">
+        <div class="card monthly-card">
+          <h3>Monthly Progress</h3>
+          <div class="bar-row"><label>Mar</label><div class="bar"><div style="width:72%"></div></div><b>72%</b></div>
+          <div class="bar-row"><label>Feb</label><div class="bar sage"><div style="width:58%"></div></div><b class="sage">58%</b></div>
+          <div class="bar-row"><label>Jan</label><div class="bar"><div style="width:65%"></div></div><b>65%</b></div>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini black"><p>Daily Average</p><h4>18min</h4><small>↑ +4min vs Feb</small></div>
+          <div class="mini black"><p>Best Week</p><h4>Mar 11-17</h4><small>+22 tasks completed</small></div>
+          <div class="mini black"><p>Completion Rate</p><h4>88%</h4><small>Above target goal</small></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="progress-mid">
+
+      <div class="card yearly-card">
+        <div class="y-head">
+          <h3>Yearly Growth</h3>
+          <span class="yoy">↑ +32% YoY</span>
+        </div>
+        <div class="chart-box">
+          <svg viewBox="0 0 400 160" class="line-svg">
+            <line x1="0" y1="40" x2="400" y2="40" class="grid"/>
+            <line x1="0" y1="80" x2="400" y2="80" class="grid"/>
+            <line x1="0" y1="120" x2="400" y2="120" class="grid"/>
+            <polyline points="10,130 60,100 100,85 150,85 200,65 240,35 280,45 330,15 390,5" class="line"/>
+            <circle cx="10" cy="130" r="5" class="dot"/>
+            <circle cx="60" cy="100" r="5" class="dot"/>
+            <circle cx="100" cy="85" r="5" class="dot"/>
+            <circle cx="150" cy="85" r="5" class="dot"/>
+            <circle cx="200" cy="65" r="5" class="dot"/>
+            <circle cx="240" cy="35" r="5" class="dot"/>
+            <circle cx="280" cy="45" r="5" class="dot"/>
+            <circle cx="330" cy="15" r="5" class="dot"/>
+            <circle cx="390" cy="5" r="6" class="dot big"/>
+          </svg>
+          <div class="months"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Oct</span><span>Dec</span></div>
+        </div>
+        <small class="chart-note">Growth steady MoM • Projected 88% by Dec</small>
+      </div>
+
+      <div class="card ach-card">
+        <h3>Achievements Wall</h3>
+        <p class="sub">6 badges earned</p>
+        <div class="ach-grid">
+          <div class="ach"><div class="ach-icon burgundy">☀</div><span>Early Bird</span></div>
+          <div class="ach"><div class="ach-icon sage">♛</div><span>Consistency King</span></div>
+          <div class="ach"><div class="ach-icon sage">🔥</div><span>Streak x30</span></div>
+          <div class="ach"><div class="ach-icon sage">🏆</div><span>Habit Master</span></div>
+          <div class="ach"><div class="ach-icon burgundy">%</div><span>Top 10% User</span></div>
+          <div class="ach"><div class="ach-icon sage">◎</div><span>Goal Crusher</span></div>
+        </div>
+        <div class="banner">
+          <div class="banner-icon">🏆</div>
+          <div><strong>128 Tasks Completed</strong><small>You've completed 128 tasks this year. Keep it up — you're in the top 10% of users!</small></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="card timeline-card">
+      <h3>Timeline — 2024</h3>
+      <p class="sub">Activity across the year</p>
+      <div class="timeline">
+        <div class="t"><i class="full"></i><span>Jan</span></div>
+        <div class="t"><i class="empty"></i><span>Feb</span></div>
+        <div class="t"><i class="full"></i><span>Mar</span></div>
+        <div class="t"><i class="full"></i><span>Apr</span></div>
+        <div class="t"><i class="full"></i><span>May</span></div>
+        <div class="t"><i class="full"></i><span>Jul</span></div>
+        <div class="t"><i class="empty"></i><span>Aug</span></div>
+        <div class="t"><i class="full"></i><span>Sep</span></div>
+        <div class="t"><i class="full"></i><span>Oct</span></div>
+        <div class="t"><i class="empty"></i><span>Nov</span></div>
+        <div class="t"><i class="empty"></i><span>Dec</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-column"><p class="footer-label">CLOVER</p><p class="footer-description">A simple space to build habits, track progress, and stay consistent every day.</p></div>
+      <div class="footer-column"><p class="footer-label">YOUR JOURNEY</p><p class="footer-routine">Build habits<br>Track progress<br>Stay consistent</p></div>
+      <div class="footer-column"><p class="footer-label">EXPLORE</p><a>Dashboard</a><a>Habits</a><a>Progress</a><a>Water</a></div>
+    </div>
+    <div class="footer-brand">CLOVER</div>
+    <div class="footer-bottom"><span>© 2026 CLOVER</span><span>BUILD BETTER HABITS • TRACK PROGRESS</span></div>
+  </footer>
+
+</div>
+</body>
+</html>
