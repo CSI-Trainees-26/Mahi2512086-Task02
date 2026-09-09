@@ -761,3 +761,11 @@ body {
     }
 
 }
+/* FIX CHROME ABUSIVE AD WARNING */
+.hero-overlay,.marquee-section,.marquee-track {
+    pointer-events: none!important;
+}
+.marquee-section {
+    overflow: hidden;
+    max-height: 40px;
+}
