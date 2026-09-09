@@ -50,36 +50,48 @@
     <div class="habit-workspace">
 
       <!-- STATS -->
-      <div class="stats-row">
-        <div class="stat-box">
-          <strong>1.8L</strong>
-          <span>TODAY INTAKE</span>
-          <small>1.2L left to goal</small>
+            <div class="task-progress-section">
+        <p class="section-label" style="color:#DCE2D5">TODAY • WATER PROGRESS</p>
+        <div class="progress-number">
+          <strong id="bigIntake">1.8L</strong>
+          <span>of 3.0L goal</span>
         </div>
-        <div class="stat-box">
-          <strong>3.0L</strong>
-          <span>DAILY GOAL</span>
-          <small>Personal target</small>
+        <div class="progress-line">
+          <div class="progress-line-fill" id="bigFill" style="width:60%"></div>
         </div>
-        <div class="stat-box">
-          <strong>72%</strong>
-          <span>HYDRATED</span>
-          <small>18 of 25 days</small>
+        <div class="progress-meta">
+          <span>KEEP GOING • DAILY INTAKE</span>
+          <strong id="bigPercent">60%</strong>
         </div>
-        <div class="stat-box">
-          <strong>5 days</strong>
-          <span>HYDRATION STREAK</span>
-          <small>Keep it flowing</small>
-        </div>
-      </div>
 
       <!-- HEADER -->
       <div class="workspace-header">
         <div>
-          <p class="section-label">TODAY • SEP 7, 2026</p>
+          <p class="section-label"></p>
           <h2>Your Hydration</h2>
         </div>
-        <button class="new-task-button">+ Add Water</button>
+        <button class="new-task-button" id="openWaterModal">+ Add Water</button>
+
+<!-- Quick Add Popup -->
+<div class="water-modal" id="waterModal">
+  <div class="water-modal-box">
+    <div class="water-modal-head">
+      <h3>Add Water 💧</h3>
+      <span id="closeModal">✕</span>
+    </div>
+    <p class="water-modal-sub">Choose amount</p>
+    <div class="water-quick-row">
+      <button class="quick-btn" data-ml="250">250ml</button>
+      <button class="quick-btn" data-ml="500">500ml</button>
+      <button class="quick-btn" data-ml="750">750ml</button>
+      <button class="quick-btn" data-ml="1000">1L</button>
+    </div>
+    <div class="water-custom-row">
+      <input type="number" id="customMl" placeholder="Custom ml e.g. 300">
+      <button id="addCustomBtn">Add</button>
+    </div>
+  </div>
+</div>
       </div>
 
       <!-- CARDS -->
@@ -357,5 +369,6 @@
     </footer>
 
   </div>
+  <script src="water.js"></script>
 </body>
 </html>

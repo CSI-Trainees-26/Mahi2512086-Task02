@@ -1,53 +1,48 @@
-/* =========================================
-   CLOVER - PROGRESS PAGE - FINAL FIXED
-   Palette: Black #0A0A0A, Beige #F3F0E8 / #F9F6F2, 
-            Sage #A8B5A2, Burgundy #9B1D20, Orange #FF5A1F
-   Footer 100% identical to habits.css & water.css
-========================================= */
-
-/* HERO */
+/* ===== CLOVER PROGRESS - PURPLE PALETTE ===== */
 .progress-hero{
-  background: #0A0A0A !important;
+  background: url("images/୨ৎ.jpeg") center/cover no-repeat !important;
   min-height: 380px;
 }
 .progress-hero .hero-overlay{
-  background: linear-gradient(to top, rgba(10,10,10,0.8), rgba(10,10,10,0.2)) !important;
+  background: linear-gradient(to top, rgba(75,48,92,0.58), rgba(124,92,155,0.15)) !important;
 }
 .progress-hero .hero-content h1{
-  color: #A8B5A2 !important;
+  color: #FFFBFF !important;
   letter-spacing: -0.08em;
 }
 .progress-hero .hero-label{
-  color: #F3F0E8 !important;
+  color: #E9DDF0 !important;
 }
 
-/* MARQUEE */
+/* MARQUEE - Plum Purple */
 .progress-marquee{
-  background: #0A0A0A !important;
-  border-top: 1px solid #222 !important;
-  border-bottom: 1px solid #222 !important;
+  background: #7C5C9B !important;
+  border-top: 1px solid #7C5C9B !important;
+  border-bottom: 1px solid #7C5C9B !important;
 }
 .progress-marquee span{
-  color: #F3F0E8 !important;
+  color: #F3E8FF !important;
+}
+.progress-marquee .marquee-track span::after{
+  content: " • ";
+  margin: 0 18px;
+  color: #F3E8FF;
 }
 
 /* WORKSPACE */
 .progress-workspace{
   padding: 28px 3vw 0;
-  background: #EDE8DC;
+  background: #F3EDF8;
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
-
 .card{
-  background: #F9F6F2;
-  border: 1px solid #E2DDD1;
+  background: #FFFBFF;
+  border: 1px solid #E9DDF0;
   padding: 22px;
-  border-radius: 6px;
+  border-radius: 12px;
 }
-
-/* TOP */
 .progress-top{
   display: grid;
   grid-template-columns: 420px 1fr;
@@ -59,19 +54,15 @@
   gap: 22px;
 }
 
-/* OVERALL - PREMIUM CIRCLE LIKE IMAGE */
-.overall-card{
-  display: flex;
-  flex-direction: column;
-}
+/* CIRCLE */
 .card-head h3{
   margin: 0;
   font-size: 20px;
   font-weight: 700;
-  color: #0A0A0A;
+  color: #4B305C;
 }
 .card-head small{
-  color: #77776F;
+  color: #8E7D9E;
   font-size: 12px;
   margin-top: 2px;
   display: block;
@@ -92,10 +83,10 @@
   stroke-width: 16;
 }
 .progress-ring .bg{
-  stroke: #EDE8DC;
+  stroke: #E9DDF0;
 }
 .progress-ring .fg{
-  stroke: #9B1D20;
+  stroke: #7C5C9B;
   stroke-linecap: round;
 }
 .circle-text{
@@ -109,12 +100,12 @@
   display: block;
   font-size: 54px;
   font-weight: 800;
-  color: #9B1D20;
+  color: #7C5C9B;
   line-height: 1;
 }
 .circle-text span{
   font-size: 12px;
-  color: #8A8A84;
+  color: #9A8AA9;
   margin-top: 4px;
   display: block;
 }
@@ -124,6 +115,7 @@
   margin: 0 0 18px;
   font-size: 18px;
   font-weight: 700;
+  color: #4B305C;
 }
 .bar-row{
   display: flex;
@@ -135,62 +127,61 @@
   width: 28px;
   font-size: 14px;
   font-weight: 500;
-  color: #0A0A0A;
+  color: #4B305C;
 }
 .bar{
   flex: 1;
   height: 16px;
-  background: #EEE7D9;
+  background: #E9DDF0;
   border-radius: 100px;
   overflow: hidden;
 }
 .bar div{
   height: 100%;
-  background: #9B1D20;
+  background: #7C5C9B;
   border-radius: 100px;
 }
 .bar.sage div{
-  background: #A8B5A2;
+  background: #B89FD1;
 }
 .bar-row b{
   min-width: 38px;
   text-align: right;
   font-size: 14px;
-  color: #9B1D20;
+  color: #7C5C9B;
   font-weight: 700;
 }
 .bar-row b.sage{
-  color: #7A8F7A;
+  color: #B89FD1;
 }
-
 .mini-grid{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 14px;
 }
 .mini.black{
-  background: #0A0A0A;
-  color: #F3F0E8;
+  background: #E9DDF0 !important;
+  color: #4B305C;
   padding: 18px;
-  border-radius: 6px;
-  border: 1px solid #0A0A0A;
+  border-radius: 12px;
+  border: 1px solid #D8C5E5;
 }
 .mini p{
   margin: 0 0 8px;
   font-size: 10px;
   letter-spacing: 0.12em;
-  color: #A8B5A2;
+  color: #7C5C9B;
   text-transform: uppercase;
 }
 .mini h4{
   margin: 0;
   font-size: 20px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #4B305C;
 }
 .mini small{
   font-size: 11px;
-  color: #9A9A94;
+  color: #8E7D9E;
   margin-top: 4px;
   display: block;
 }
@@ -211,9 +202,10 @@
   margin: 0;
   font-size: 18px;
   font-weight: 700;
+  color: #4B305C;
 }
 .yoy{
-  background: #9B1D20;
+  background: #7C5C9B;
   color: #fff;
   font-size: 11px;
   padding: 5px 10px;
@@ -221,10 +213,10 @@
   font-weight: 600;
 }
 .chart-box{
-  background: #FFFEFB;
-  border: 1px solid #EDE8DC;
+  background: #FFFBFF;
+  border: 1px solid #E9DDF0;
   padding: 14px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .line-svg{
   width: 100%;
@@ -232,21 +224,21 @@
   display: block;
 }
 .line-svg .grid{
-  stroke: #EDE8DC;
+  stroke: #E9DDF0;
   stroke-width: 1;
 }
 .line-svg .line{
   fill: none;
-  stroke: #9B1D20;
+  stroke: #7C5C9B;
   stroke-width: 2.5;
   stroke-linejoin: round;
   stroke-linecap: round;
 }
 .line-svg .dot{
-  fill: #9B1D20;
+  fill: #7C5C9B;
 }
 .line-svg .dot.big{
-  fill: #9B1D20;
+  fill: #7C5C9B;
   stroke: #fff;
   stroke-width: 2;
 }
@@ -255,24 +247,25 @@
   justify-content: space-between;
   font-size: 11px;
   margin-top: 8px;
-  color: #555;
+  color: #7D6C8E;
 }
 .chart-note{
   font-size: 11px;
-  color: #77776F;
+  color: #8E7D9E;
   margin-top: 10px;
   display: block;
 }
 
-/* ACHIEVEMENTS - CIRCULAR ONLY */
+/* ACHIEVEMENTS */
 .ach-card h3{
   margin: 0;
   font-size: 18px;
   font-weight: 700;
+  color: #4B305C;
 }
 .sub{
   font-size: 12px;
-  color: #77776F;
+  color: #8E7D9E;
   margin: 4px 0 0;
 }
 .ach-grid{
@@ -294,25 +287,24 @@
   font-weight: 700;
 }
 .ach-icon.burgundy{
-  background: #9B1D20;
+  background: #7C5C9B;
 }
 .ach-icon.sage{
-  background: #A8B5A2;
+  background: #B89FD1;
 }
 .ach span{
   font-size: 11px;
   font-weight: 500;
-  color: #0A0A0A;
+  color: #4B305C;
 }
-
 .banner{
   margin-top: 18px;
-  background: #0A0A0A;
-  color: #F3F0E8;
+  background: #4B305C;
+  color: #F3EDF8;
   display: flex;
   gap: 14px;
   padding: 16px;
-  border-radius: 6px;
+  border-radius: 12px;
   align-items: center;
 }
 .banner-icon{
@@ -321,7 +313,7 @@
   height: 36px;
   display: grid;
   place-items: center;
-  background: #1A1A1A;
+  background: #6A4C83;
   border-radius: 50%;
 }
 .banner strong{
@@ -331,7 +323,7 @@
 }
 .banner small{
   font-size: 11px;
-  color: #A8B5A2;
+  color: #D8C5E5;
   margin-top: 2px;
   display: block;
 }
@@ -340,11 +332,12 @@
 .timeline-card h3{
   margin: 0;
   font-size: 18px;
+  color: #4B305C;
 }
 .timeline{
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #9B1D20;
+  border-top: 1px solid #7C5C9B;
   padding-top: 16px;
   margin-top: 16px;
 }
@@ -360,126 +353,138 @@
   margin: 0 auto 8px;
 }
 .t i.full{
-  background: #9B1D20;
+  background: #7C5C9B;
 }
 .t i.empty{
   background: transparent;
-  border: 1px solid #9B1D20;
+  border: 1px solid #7C5C9B;
 }
 .t span{
   font-size: 11px;
-  color: #0A0A0A;
+  color: #4B305C;
 }
 
-/* FOOTER - IDENTICAL TO HABITS/WATER */
+/* FOOTER + SIDEBAR */
 .site-footer{
   padding: 30px 5vw 0;
-  background: #F3F0E8;
-  border-top: 1px solid #D9D6CC;
+  background: #F3EDF8;
+  border-top: 1px solid #E9DDF0;
 }
-
-/* ===== SIDEBAR FIX - THIS FIXES YOUR HOVER ISSUE ===== */
 .sidebar-link.active{
-  background: #9B1D20 !important;
+  background: #7C5C9B !important;
   color: #FFFFFF !important;
 }
 .sidebar-link:hover{
-  background: #A8B5A2 !important;
-  color: #0A0A0A !important;
+  background: #E9DDF0 !important;
+  color: #4B305C !important;
 }
 .sidebar-link{
   transition: all 0.2s ease !important;
 }
-
-/* ===== RESPONSIVE - SAME AS habits.css ===== */
 @media (max-width: 900px){
-  .progress-top{
-    grid-template-columns: 1fr;
-  }
-  .progress-mid{
-    grid-template-columns: 1fr;
-  }
-  .ach-grid{
-    grid-template-columns: repeat(3,1fr);
-  }
+  .progress-top{ grid-template-columns: 1fr; }
+  .progress-mid{ grid-template-columns: 1fr; }
+  .ach-grid{ grid-template-columns: repeat(3,1fr); }
 }
-
 @media (max-width: 700px){
-  .sidebar{
-    position: static;
-    width: 100%;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid #D9D6CC;
-  }
-  .main-content{
-    margin-left: 0;
-  }
-  .progress-workspace{
-    padding: 20px 4vw 0;
-  }
-  .mini-grid{
-    grid-template-columns: 1fr;
-  }
-  .ach-grid{
-    grid-template-columns: repeat(2,1fr);
-  }
-  .progress-hero{
-    min-height: 320px;
-  }
-  .hero-content{
-    padding: 28px;
-  }
-  .hero-content h1{
-    font-size: 70px;
-  }
-  .circle-wrap{
-    width: 200px;
-    height: 200px;
-  }
-  .circle-text strong{
-    font-size: 46px;
-  }
-  .footer-brand{
-    font-size: 22vw;
-  }
+  .mini-grid{ grid-template-columns: 1fr; }
+  .ach-grid{ grid-template-columns: repeat(2,1fr); }
+  .progress-hero{ min-height: 320px; }
 }
-
-@media (max-width: 480px){
-  .ach-grid{
-    grid-template-columns: 1fr 1fr;
-  }
-  .months{
-    font-size: 9px;
-  }
-  .timeline{
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .t{
-    min-width: 60px;
-  }
-}
-/* ===== MOVING STRIPE - GREEN LIKE PROGRESS ===== */
+/* MARQUEE = same as 128 Tasks Completed card */
 .progress-marquee{
-  background: #A8B5A2 !important;
-  border-top: 1px solid #A8B5A2 !important;
-  border-bottom: 1px solid #A8B5A2 !important;
+  background: #4B305C !important;
+  border-top: 1px solid #4B305C !important;
+  border-bottom: 1px solid #4B305C !important;
 }
 
 .progress-marquee .marquee-track span{
-  color: #0A0A0A !important;
-  font-weight: 600;
+  color: #E9DDF0 !important;
 }
 
 .progress-marquee .marquee-track span::after{
-  content: " • ";
-  margin: 0 18px;
-  color: #0A0A0A;
+  color: #E9DDF0 !important;
 }
-.progress-marquee{
-  background: #3F5138 !important;
+/* --- TODAY'S MOTIVATION CARD --- */
+.motivation-wrapper {
+  margin: 20px 0;
 }
-.progress-marquee .marquee-track span{
-  color: #DCE2D5 !important;
+.motivation-card {
+  display: flex;
+  background: #FFFBFF;
+  border: 1px solid #EFE6F3;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.motivation-img {
+  width: 140px;
+  min-width: 140px;
+}
+.motivation-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.motivation-content {
+  padding: 16px 20px;
+  flex: 1;
+}
+.motivation-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.motivation-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: #F3EDF8;
+  color: #4B305C;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+.motivation-date {
+  font-size: 10px;
+  color: #8E7D9E;
+}
+.motivation-quote {
+  font-size: 17px;
+  color: #2D1F36;
+  font-style: italic;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+.motivation-author {
+  font-size: 12px;
+  color: #8E7D9E;
+  display: block;
+  margin-bottom: 12px;
+}
+.motivation-actions {
+  display: flex;
+  gap: 8px;
+}
+.m-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid #E9DDF0;
+  background: white;
+  color: #4B305C;
+}
+.m-btn.save {
+  background: #4B305C;
+  color: white;
+  border-color: #4B305C;
+}
+.m-btn.like.liked {
+  background: #E9DDF0;
+}
+.saved-box {
+  margin-top: 14px;
+  background: #FFFBFF;
+  border: 1px solid #EFE6F3;
+  border-radius: 12px;
+  padding: 14px;
 }

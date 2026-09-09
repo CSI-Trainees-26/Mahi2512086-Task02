@@ -1,8 +1,3 @@
-/* =========================================
-   CLOVER - WATER PAGE - RESPONSIVE
-   Same spec as habits.css, blue accent
-========================================= */
-
 /* Hero - water image */
 .water-hero{
   background-image: url("https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=1400") !important;
@@ -38,7 +33,7 @@
 }
 
 /* Calendar - blue levels */
-.level-0{ background:#FFFFFF !important; }
+.level-0{ background:#FFFFFF !important; border:1px solid #E5E0D5 !important; }
 .level-1{ background:#E6EFF3 !important; }
 .level-2{ background:#C9DCE8 !important; }
 .level-3{ background:#8AB6D1 !important; color:#FFFFFF !important; }
@@ -49,103 +44,161 @@
 .insight-card.best{
   border-left: 4px solid #3B6B7A !important;
 }
-.task-progress-section .progress-line-fill{
-  background: #8AB6D1 !important;
-}
-.task-progress-section .pill.done{
-  background: #3B6B7A !important;
-}
 
-/* ===== RESPONSIVE - Same as your habits.css + extra ===== */
-
-@media (max-width: 900px){
-  .habit-grid{
-    grid-template-columns: 1fr 1fr;
-  }
-  .stats-row{
-    grid-template-columns: 1fr 1fr;
-  }
-  .bottom-wrapper{
-    grid-template-columns: 1fr;
-  }
-  .task-progress-section{
-    padding: 40px;
-  }
-}
-
-@media (max-width: 700px){
-  .sidebar{
-    position: static;
-    width: 100%;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid #D9D6CC;
-  }
-  .main-content{
-    margin-left: 0;
-  }
-  .habit-grid{
-    grid-template-columns: 1fr;
-  }
-  .stats-row{
-    grid-template-columns: 1fr 1fr;
-  }
-  .task-hero{
-    min-height: 320px;
-  }
-  .hero-content{
-    padding: 28px;
-  }
-  .hero-content h1{
-    font-size: 70px;
-  }
-  .task-progress-section{
-    padding: 28px;
-  }
-  .week-row{
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .pill{
-    width: 52px;
-  }
-  .footer-brand{
-    font-size: 22vw;
-  }
-}
-/* ===== WATER MARQUEE - FIX TO BLUE #2f4a5a ===== */
+/* ===== MARQUEE BLUE ===== */
 .marquee-section{
   background: #2f4a5a !important;
   border-top: 1px solid #2f4a5a !important;
   border-bottom: 1px solid #2f4a5a !important;
 }
-
 .marquee-track span{
-  color: #E8F1F5 !important; /* light blue-white for contrast */
+  color: #E8F1F5 !important;
   font-weight: 600;
   letter-spacing: 0.06em;
 }
 
-/* the dots between words */
-.marquee-track span::after{
-  content: " • ";
-  color: #8AA5B5 !important;
+/* ===== WATER MODAL - QUICK ADD ===== */
+.water-modal{
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.4);
+  z-index:99;
+  place-items:center;
+}
+.water-modal.show{
+  display:grid !important;
+}
+.water-modal-box{
+  background:#fff;
+  width:360px;
+  max-width:90%;
+  border-radius:16px;
+  padding:22px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+.water-modal-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.water-modal-head h3{
+  font-size:18px;
+  font-weight:800;
+}
+.water-modal-head span{
+  cursor:pointer;
+  font-size:18px;
+  width:32px; height:32px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#f3f3f3;
+}
+.water-modal-sub{
+  margin:12px 0 10px;
+  font-size:13px;
+  color:#777;
+}
+.water-quick-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:14px;
+}
+.quick-btn{
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #D5E2E6;
+  background:#E6EFF3;
+  color:#2F4A5A;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.2s;
+}
+.quick-btn:hover{
+  background:#2F4A5A;
+  color:#fff;
+  transform:translateY(-2px);
+}
+.water-custom-row{
+  display:flex;
+  gap:8px;
+}
+.water-custom-row input{
+  flex:1;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  outline:none;
+}
+.water-custom-row button{
+  padding:12px 18px;
+  border-radius:10px;
+  border:none;
+  background:#2F4A5A;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
 }
 
+/* ===== LIGHT THEME FIX - SAME AS HABITS ===== */
+.main-content, .habit-workspace{
+  background: #F5F1EB !important;
+}
+
+/* ===== BOTTOM SECTION LIGHT - NO BLACK ===== */
+.task-progress-section{
+  background: #FFFFFF !important;
+  color: #0A0A0A !important;
+  border: 1px solid #E5E0D5 !important;
+}
+.task-progress-section .section-label{
+  color: #3B6B7A !important;
+}
+.task-progress-section .progress-line{
+  background: #E6EFF3 !important;
+}
+.task-progress-section .progress-line-fill{
+  background: #2F4A5A !important;
+}
+.task-progress-section .pill{
+  background: #F5F1EB !important;
+  color: #3B6B7A !important;
+  border: 1px solid #D5E2E6 !important;
+}
+.task-progress-section .pill.done{
+  background: #D5E2E6 !important;
+  color: #2F4A5A !important;
+}
+.task-progress-section .pill.today{
+  background: #2F4A5A !important;
+  color: #FFFFFF !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .habit-grid{ grid-template-columns: 1fr 1fr; }
+  .stats-row{ grid-template-columns: 1fr 1fr; }
+  .bottom-wrapper{ grid-template-columns: 1fr; }
+  .task-progress-section{ padding: 40px; }
+}
+@media (max-width: 700px){
+  .sidebar{ position: static; width: 100%; height: auto; border-right: none; border-bottom: 1px solid #D9D6CC; }
+  .main-content{ margin-left: 0; }
+  .habit-grid{ grid-template-columns: 1fr; }
+  .stats-row{ grid-template-columns: 1fr 1fr; }
+  .task-hero{ min-height: 320px; }
+  .hero-content{ padding: 28px; }
+  .hero-content h1{ font-size: 70px; }
+  .task-progress-section{ padding: 28px; }
+  .week-row{ flex-wrap: wrap; gap: 10px; }
+  .pill{ width: 52px; }
+  .footer-brand{ font-size: 22vw; }
+}
 @media (max-width: 480px){
-  .stats-row{
-    grid-template-columns: 1fr;
-  }
-  .habit-workspace{
-    padding: 20px 4vw 0;
-  }
-  .calendar-grid{
-    gap: 4px;
-  }
-  .calendar-day strong{
-    font-size: 13px;
-  }
-  .calendar-day small{
-    font-size: 9px;
-  }
+  .stats-row{ grid-template-columns: 1fr; }
+  .habit-workspace{ padding: 20px 4vw 0; }
+  .calendar-grid{ gap: 4px; }
 }

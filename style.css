@@ -1,6 +1,4 @@
-/* =========================================
-   RESET
-========================================= */
+/* ===== RESET ===== */
 
 * {
     margin: 0;
@@ -8,2986 +6,1150 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: "Inter", sans-serif;
-
     background: #f5f6f2;
-
     color: #20251f;
 }
-
-
-button,
-select {
-    font-family: inherit;
-}
-
-
-button {
-    cursor: pointer;
-}
-
 
 a {
     text-decoration: none;
     color: inherit;
 }
 
+button,
+select {
+    font-family: inherit;
+    cursor: pointer;
+}
 
-/* =========================================
-   MAIN APP
-========================================= */
+/* ===== APP LAYOUT ===== */
 
 .app-container {
     display: flex;
-
     min-height: 100vh;
 }
 
-
-/* =========================================
-   SIDEBAR
-========================================= */
-
 .sidebar {
-
     width: 235px;
-
-    min-height: 100vh;
-
+    height: 100vh;
     background: #ffffff;
-
     border-right: 1px solid #e8ebe5;
-
     padding: 28px 16px;
-
     display: flex;
-
     flex-direction: column;
-
     position: sticky;
-
     top: 0;
 }
 
-
-/* =========================================
-   LOGO
-========================================= */
-
-.logo {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 11px;
-
-    padding: 0 12px;
-
-    margin-bottom: 45px;
-}
-
-
-.logo-icon {
-
-    width: 35px;
-
-    height: 35px;
-
-    border-radius: 11px;
-
-    background: #e7efe7;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-
-.logo-icon svg {
-
-    width: 19px;
-
-    height: 19px;
-
-    color: #5f8064;
-
-    stroke-width: 2;
-}
-
-
-.logo h2 {
-
-    font-size: 20px;
-
-    font-weight: 700;
-
-    letter-spacing: -0.4px;
-
-    color: #20251f;
-}
-
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
-.navigation {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 6px;
-}
-
-
-.nav-link {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 13px;
-
-    padding: 12px 13px;
-
-    border-radius: 10px;
-
-    color: #777d75;
-
-    font-size: 13px;
-
-    font-weight: 500;
-
-    transition: all 0.2s ease;
-
-    position: relative;
-}
-
-
-.nav-link svg {
-
-    width: 18px;
-
-    height: 18px;
-
-    stroke-width: 1.8;
-
-    flex-shrink: 0;
-
-    transition: all 0.2s ease;
-}
-
-
-/* Hover */
-
-.nav-link:hover {
-
-    background: #f3f6f2;
-
-    color: #5f8064;
-}
-
-
-.nav-link:hover svg {
-
-    color: #5f8064;
-
-    transform: translateX(1px);
-}
-
-
-/* =========================================
-   ACTIVE NAVIGATION
-========================================= */
-
-.nav-link.active {
-
-    background: #e8f0e8;
-
-    color: #5f8064;
-
-    font-weight: 600;
-}
-
-
-.nav-link.active svg {
-
-    color: #5f8064;
-
-    stroke-width: 2.2;
-}
-
-
-/* Left active indicator */
-
-.nav-link.active::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: -16px;
-
-    width: 3px;
-
-    height: 22px;
-
-    background: #719377;
-
-    border-radius: 0 5px 5px 0;
-}
-
-
-/* =========================================
-   SIDEBAR BOTTOM
-========================================= */
-
-.sidebar-bottom {
-
-    margin-top: auto;
-}
-
-
-/* =========================================
-   PROFILE
-========================================= */
-
-.profile {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    padding: 17px 9px 4px;
-
-    border-top: 1px solid #eeeeee;
-
-    margin-top: 17px;
-}
-
-
-.profile-avatar {
-
-    width: 36px;
-
-    height: 36px;
-
-    border-radius: 50%;
-
-    background: #dce8dc;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    color: #5f8064;
-}
-
-
-.profile-info h4 {
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    color: #343934;
-
-    margin-bottom: 3px;
-}
-
-
-.profile-info p {
-
-    font-size: 10px;
-
-    color: #969b94;
-}
-
-
-/* =========================================
-   MAIN CONTENT
-========================================= */
-
 .main-content {
-
     flex: 1;
-
     padding: 35px 42px;
-
     max-width: 1500px;
-
     margin: auto;
 }
 
+/* ===== SIDEBAR ===== */
 
-/* =========================================
-   TOP BAR
-========================================= */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 0 12px;
+    margin-bottom: 45px;
+}
+
+.logo-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 11px;
+    background: #e7efe7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 12px 13px;
+    border-radius: 10px;
+    color: #777d75;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background: #f3f6f2;
+    color: #5f8064;
+}
+
+.nav-link.active {
+    background: #e8f0e8;
+    color: #5f8064;
+    font-weight: 600;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 17px 9px 4px;
+    border-top: 1px solid #eeeeee;
+    margin-top: 17px;
+}
+
+.profile-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #dce8dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5f8064;
+}
+
+.profile-info h4 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.profile-info p {
+    font-size: 10px;
+    color: #969b94;
+}
+
+/* ===== TOP BAR ===== */
 
 .top-bar {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: flex-start;
-
     margin-bottom: 30px;
 }
 
-
 .small-heading,
 .card-label {
-
     font-size: 10px;
-
     font-weight: 600;
-
     letter-spacing: 1.3px;
-
     color: #90968d;
-
     margin-bottom: 7px;
 }
-
 
 .top-bar h1 {
-
     font-size: 28px;
-
     margin-bottom: 7px;
 }
 
-
 .date {
-
     color: #929791;
-
     font-size: 13px;
 }
 
-
 .top-icons {
-
     display: flex;
-
     gap: 10px;
 }
 
-
 .top-icons button {
-
     border: none;
-
     background: white;
-
     width: 40px;
-
     height: 40px;
-
     border-radius: 50%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-
-.top-icons svg {
-
-    width: 17px;
-
-    height: 17px;
-
-    color: #737970;
-}
-
-
-/* =========================================
-   QUICK STATS
-========================================= */
+/* ===== QUICK STATS ===== */
 
 .quick-stats {
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 18px;
-
     margin-bottom: 20px;
 }
 
-
 .stat-card {
-
     background: white;
-
     border-radius: 17px;
-
     padding: 22px;
-
-    min-height: 170px;
-
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
-
-    transition: transform 0.2s ease;
 }
-
-
-.stat-card:hover {
-
-    transform: translateY(-2px);
-}
-
 
 .card-heading {
-
     display: flex;
-
     justify-content: space-between;
-
-    align-items: flex-start;
 }
 
-
 .stat-card h2 {
-
     font-size: 27px;
-
     margin: 8px 0;
 }
 
-
-.stat-card h2 span {
-
-    font-size: 13px;
-
-    font-weight: 500;
-
-    color: #8b918a;
-}
-
-
-/* =========================================
-   CARD ICONS
-========================================= */
-
-.card-icon {
-
-    width: 43px;
-
-    height: 43px;
-
-    border-radius: 13px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-
-.card-icon svg {
-
-    width: 20px;
-
-    height: 20px;
-
-    stroke-width: 1.8;
-}
-
-
-.water-icon {
-
-    background: #e4f0ed;
-}
-
-
-.sleep-icon {
-
-    background: #eee9f4;
-}
-
-
-.calorie-icon {
-
-    background: #f5e9df;
-}
-
-
-/* =========================================
-   TEXT
-========================================= */
-
 .muted-text {
-
     color: #929791;
-
     font-size: 12px;
-
     margin-bottom: 15px;
 }
 
-
-/* =========================================
-   PROGRESS BAR
-========================================= */
-
 .progress-bar {
-
     width: 100%;
-
     height: 7px;
-
     background: #edf0eb;
-
     border-radius: 20px;
-
     overflow: hidden;
-
     margin-bottom: 10px;
 }
 
-
 .progress-fill {
-
     height: 100%;
-
     border-radius: 20px;
-
     background: #719377;
 }
 
-
-.water-progress {
-
-    width: 62.5%;
-}
-
-
-.calorie-progress {
-
-    width: 72%;
-}
-
-
-.habit-progress-fill {
-
-    width: 60%;
-}
-
-
 .small-button {
-
     border: none;
-
     background: #edf4ed;
-
     color: #5f8064;
-
     padding: 7px 12px;
-
     border-radius: 8px;
-
     font-size: 11px;
-
-    cursor: pointer;
-
-    margin-top: 4px;
 }
 
-
-.small-button:hover {
-
-    background: #e0ebe0;
-}
-
-
-.percentage {
-
-    font-size: 11px;
-
-    color: #929791;
-}
-
-
-/* =========================================
-   SLEEP MINI STAT
-========================================= */
-
-.mini-stat {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    border-top: 1px solid #f0f1ef;
-
-    padding-top: 12px;
-
-    font-size: 11px;
-
-    color: #91968f;
-}
-
-
-.mini-stat strong {
-
-    color: #719377;
-}
-
-
-/* =========================================
-   DASHBOARD GRID
-========================================= */
+/* ===== DASHBOARD - 3 COLUMNS ===== */
 
 .dashboard-grid {
-
-    display: grid;
-
-    grid-template-columns: 1.35fr 1fr;
-
-    gap: 18px;
-
+    width: 100%;
     margin-bottom: 20px;
 }
 
+.tasks-habits-row {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr 0.9fr;
+    gap: 18px;
+    align-items: stretch;
+}
 
 .dashboard-card {
-
     background: white;
-
     border-radius: 17px;
-
     padding: 24px;
-
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
-
-    transition: transform 0.2s ease;
 }
-
-
-.dashboard-card:hover {
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
-   SECTION HEADER
-========================================= */
 
 .section-header {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     margin-bottom: 20px;
 }
 
-
 .section-header h2 {
-
     font-size: 18px;
 }
 
-
 .section-header a {
-
     font-size: 11px;
-
     color: #719377;
 }
 
-
-/* =========================================
-   TASKS
-========================================= */
-
-.task-list {
-
-    display: flex;
-
-    flex-direction: column;
-}
-
+/* ===== TASKS ===== */
 
 .task {
-
     display: flex;
-
-    align-items: center;
-
     justify-content: space-between;
-
+    align-items: center;
     padding: 14px 0;
-
     border-bottom: 1px solid #f0f1ef;
 }
 
-
 .task-left {
-
     display: flex;
-
     align-items: center;
-
     gap: 12px;
 }
 
-
 .task-check {
-
     width: 20px;
-
     height: 20px;
-
     border: 1.5px solid #cbd0ca;
-
     border-radius: 6px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     color: white;
-
-    font-size: 11px;
-
-    flex-shrink: 0;
+    cursor: pointer;
 }
 
-
 .task-check.completed {
-
     background: #719377;
-
     border-color: #719377;
 }
 
-
 .task h3 {
-
     font-size: 13px;
-
     font-weight: 600;
-
     margin-bottom: 4px;
 }
 
-
 .task p {
-
     font-size: 10px;
-
     color: #969b94;
 }
 
-
-/* =========================================
-   TASK STATUS
-========================================= */
-
 .task-status {
-
     font-size: 9px;
-
     padding: 5px 8px;
-
     border-radius: 20px;
+    background: #f4f1eb;
 }
 
-
 .task-status.done {
-
     background: #e8f1e8;
-
     color: #648168;
 }
 
-
-.task-status.pending {
-
-    background: #f4f1eb;
-
-    color: #9b8b70;
-}
-
-
-/* =========================================
-   ADD TASK BUTTON
-========================================= */
-
 .add-task-button {
-
     width: 100%;
-
     border: 1px dashed #c9d1c8;
-
     background: #fafbf9;
-
     padding: 10px;
-
     border-radius: 9px;
-
     margin-top: 17px;
-
     color: #66816b;
-
-    cursor: pointer;
-
     font-size: 12px;
-
     display: flex;
-
-    align-items: center;
-
     justify-content: center;
-
     gap: 6px;
-
-    transition: 0.2s;
 }
 
-
-.add-task-button svg {
-
-    width: 14px;
-
-    height: 14px;
-}
-
-
-.add-task-button:hover {
-
-    background: #eef4ee;
-}
-
-
-/* =========================================
-   HABITS
-========================================= */
+/* ===== HABITS ===== */
 
 .habit {
-
     display: flex;
-
     align-items: center;
-
     padding: 11px 0;
-
     border-bottom: 1px solid #f0f1ef;
 }
 
-
 .habit-icon {
-
     width: 38px;
-
     height: 38px;
-
     background: #f4f6f2;
-
     border-radius: 11px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     margin-right: 12px;
 }
 
-
-.habit-icon svg {
-
-    width: 17px;
-
-    height: 17px;
-
-    color: #6f796f;
-
-    stroke-width: 1.8;
-}
-
-
 .habit-info {
-
     flex: 1;
 }
 
-
 .habit-info h3 {
-
     font-size: 13px;
-
     margin-bottom: 3px;
 }
 
-
 .habit-info p {
-
     font-size: 10px;
-
     color: #969b94;
 }
 
-
 .habit-check {
-
     width: 21px;
-
     height: 21px;
-
     border: 1.5px solid #ccd2ca;
-
     border-radius: 50%;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     color: white;
-
-    font-size: 11px;
+    cursor: pointer;
 }
 
-
 .habit-check.completed {
-
     background: #719377;
-
     border-color: #719377;
 }
 
-
-/* =========================================
-   HABIT PROGRESS
-========================================= */
-
 .habit-progress {
-
     margin-top: 20px;
 }
 
-
 .progress-header {
-
     display: flex;
-
     justify-content: space-between;
-
     margin-bottom: 8px;
-
     font-size: 11px;
-
     color: #7e847c;
 }
 
+/* ===== RIGHT SIDE C-1 & C-2 ===== */
 
-/* =========================================
-   BOTTOM GRID
-========================================= */
-
-.bottom-grid {
-
-    display: grid;
-
-    grid-template-columns: 0.85fr 1.4fr;
-
-    gap: 18px;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================================
-   POMODORO
-========================================= */
-
-.timer-icon {
-
-    width: 20px;
-
-    height: 20px;
-
-    color: #719377;
-}
-
-
-.timer {
-
-    text-align: center;
-
-    padding: 8px 0 20px;
-}
-
-
-.timer h1 {
-
-    font-size: 43px;
-
-    letter-spacing: 2px;
-}
-
-
-.timer p {
-
-    color: #969b94;
-
-    font-size: 11px;
-
-    margin-top: 5px;
-}
-
-
-.pomodoro-task label {
-
-    display: block;
-
-    font-size: 10px;
-
-    color: #858b83;
-
-    margin-bottom: 6px;
-}
-
-
-.pomodoro-task select {
-
-    width: 100%;
-
-    padding: 10px;
-
-    border: 1px solid #e2e5e0;
-
-    border-radius: 8px;
-
-    background: #fafbf9;
-
-    color: #555b54;
-
-    font-size: 11px;
-
-    outline: none;
-}
-
-
-.timer-buttons {
-
+.right-extra-col {
     display: flex;
+    flex-direction: column;
+    gap: 18px;
+    height: 100%;
+}
 
-    gap: 8px;
+.mood-card {
+    background: white;
+    border: 1px solid #e8ebe5;
+    border-radius: 17px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
+}
 
+.insight-card {
+    background: #1e3a3a;
+    color: white;
+    border-radius: 17px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mood-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mood-header h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.mood-header span {
+    font-size: 11px;
+    color: #888;
+}
+
+.mood-emojis {
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 0;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.mood-text {
+    font-size: 11px;
+    color: #888;
+}
+
+.mood-week {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f1ef;
+    text-align: center;
+}
+
+.mood-week span {
+    font-size: 10px;
+    color: #999;
+}
+
+.m-dot {
+    width: 6px;
+    height: 6px;
+    background: #eee;
+    border-radius: 50%;
+    margin: 4px auto;
+}
+
+.m-dot.today {
+    background: #719377;
+    width: 8px;
+    height: 8px;
+}
+
+.mood-note {
+    background: #f8f9f7;
+    padding: 10px;
+    border-radius: 10px;
     margin-top: 12px;
 }
 
-
-.timer-buttons button {
-
-    flex: 1;
-
-    padding: 10px;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-
+.mood-note p {
     font-size: 11px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 5px;
+    font-weight: 600;
+    margin-bottom: 2px;
 }
 
-
-.timer-buttons svg {
-
-    width: 13px;
-
-    height: 13px;
+.mood-note span {
+    font-size: 11px;
+    color: #555;
 }
 
-
-.start-button {
-
-    border: none;
-
-    background: #719377;
-
-    color: white;
-}
-
-
-.start-button:hover {
-
-    background: #5f8064;
-}
-
-
-.reset-button {
-
-    border: 1px solid #dfe3dc;
-
-    background: white;
-
-    color: #666d64;
-}
-
-
-.reset-button:hover {
-
-    background: #f5f6f2;
-}
-
-
-/* =========================================
-   ANALYTICS
-========================================= */
-
-.week-select {
-
-    border: 1px solid #e4e7e2;
-
-    padding: 7px 9px;
-
-    border-radius: 7px;
-
+.insight-label {
     font-size: 10px;
-
-    background: white;
-
-    color: #727870;
-
-    outline: none;
-}
-
-
-.analytics-stats {
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 10px;
-
-    margin-bottom: 25px;
-}
-
-
-.analytics-stats div {
-
-    padding: 11px;
-
-    background: #f7f8f5;
-
-    border-radius: 9px;
-}
-
-
-.analytics-stats span {
-
-    display: block;
-
-    font-size: 9px;
-
-    color: #929791;
-
-    margin-bottom: 5px;
-}
-
-
-.analytics-stats strong {
-
-    display: block;
-
-    font-size: 16px;
-}
-
-
-.analytics-stats small {
-
-    color: #719377;
-
-    font-size: 8px;
-}
-
-
-/* =========================================
-   CHART
-========================================= */
-
-.chart {
-
-    height: 150px;
-
-    border-bottom: 1px solid #e6e8e4;
-
-    position: relative;
-}
-
-
-.chart-bars {
-
-    height: 100%;
-
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: space-around;
-
-    padding: 0 10px;
-}
-
-
-.bar-container {
-
-    height: 100%;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: flex-end;
-
-    align-items: center;
-
-    gap: 7px;
-}
-
-
-.bar {
-
-    width: 22px;
-
-    background: #9cb19e;
-
-    border-radius: 6px 6px 0 0;
-}
-
-
-.bar-1 {
-    height: 55px;
-}
-
-
-.bar-2 {
-    height: 80px;
-}
-
-
-.bar-3 {
-    height: 65px;
-}
-
-
-.bar-4 {
-    height: 105px;
-}
-
-
-.bar-5 {
-    height: 75px;
-}
-
-
-.bar-6 {
-    height: 120px;
-}
-
-
-.bar-7 {
-    height: 90px;
-}
-
-
-.bar-container span {
-
-    font-size: 8px;
-
-    color: #969b94;
-}
-
-
-/* =========================================
-   MOTIVATIONAL QUOTE
-========================================= */
-
-.quote-card {
-
-    background: #e8f0e8;
-
-    border-radius: 17px;
-
-    padding: 20px 25px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 17px;
-}
-
-
-.quote-icon {
-
-    width: 42px;
-
-    height: 42px;
-
-    border-radius: 12px;
-
-    background: white;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-
-.quote-icon svg {
-
-    width: 19px;
-
-    height: 19px;
-
-    color: #719377;
-}
-
-
-.quote-card h2 {
-
-    font-size: 15px;
-
-    font-weight: 600;
-}
-
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width: 1100px) {
-
-    .sidebar {
-
-        width: 190px;
-    }
-
-
-    .main-content {
-
-        padding: 30px;
-    }
-
-
-    .dashboard-grid,
-    .bottom-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 800px) {
-
-    .sidebar {
-
-        width: 70px;
-
-        padding: 20px 10px;
-    }
-
-
-    .logo h2 {
-
-        display: none;
-    }
-
-
-    .logo {
-
-        justify-content: center;
-    }
-
-
-    .nav-link {
-
-        justify-content: center;
-
-        font-size: 0;
-    }
-
-
-    .nav-link span {
-
-        display: none;
-    }
-
-
-    .nav-link svg {
-
-        width: 19px;
-
-        height: 19px;
-    }
-
-
-    .profile {
-
-        justify-content: center;
-    }
-
-
-    .profile-info {
-
-        display: none;
-    }
-
-
-    .main-content {
-
-        padding: 25px 18px;
-    }
-
-
-    .quick-stats {
-
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
-
-
-/* =========================================
-   TABLET
-   1100px and below
-========================================= */
-
-@media (max-width: 1100px) {
-
-    /* Sidebar */
-
-    .sidebar {
-        width: 200px;
-    }
-
-
-    /* Main content */
-
-    .main-content {
-        padding: 30px;
-    }
-
-
-    /* Dashboard sections */
-
-    .dashboard-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .bottom-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* =========================================
-   SMALL TABLET
-   850px and below
-========================================= */
-
-@media (max-width: 850px) {
-
-    /* Sidebar becomes smaller */
-
-    .sidebar {
-        width: 75px;
-
-        padding: 25px 10px;
-    }
-
-
-    /* Hide logo text */
-
-    .logo {
-        justify-content: center;
-
-        padding: 0;
-
-        margin-bottom: 35px;
-    }
-
-
-    .logo h2 {
-        display: none;
-    }
-
-
-    /* Center navigation */
-
-    .nav-link {
-        justify-content: center;
-
-        padding: 12px;
-    }
-
-
-    .nav-link span {
-        display: none;
-    }
-
-
-    .nav-link {
-        font-size: 0;
-    }
-
-
-    .nav-link svg {
-        width: 20px;
-
-        height: 20px;
-    }
-
-
-    /* Profile */
-
-    .profile {
-        justify-content: center;
-
-        padding-left: 0;
-
-        padding-right: 0;
-    }
-
-
-    .profile-info {
-        display: none;
-    }
-
-
-    /* Main content */
-
-    .main-content {
-        padding: 25px;
-    }
-
-
-    /* Stats */
-
-    .quick-stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-   600px and below
-========================================= */
-
-@media (max-width: 600px) {
-
-    /* =====================================
-       APP
-    ====================================== */
-
-    .app-container {
-        display: block;
-    }
-
-
-    /* =====================================
-       SIDEBAR
-    ====================================== */
-
-    .sidebar {
-
-        width: 100%;
-
-        min-height: auto;
-
-        height: 65px;
-
-        padding: 0 15px;
-
-        position: sticky;
-
-        top: 0;
-
-        z-index: 100;
-
-        border-right: none;
-
-        border-bottom: 1px solid #e8ebe5;
-
-        display: flex;
-
-        flex-direction: row;
-
-        align-items: center;
-
-        justify-content: space-between;
-    }
-
-
-    /* =====================================
-       LOGO
-    ====================================== */
-
-    .logo {
-
-        margin: 0;
-
-        padding: 0;
-
-        display: flex;
-
-        justify-content: flex-start;
-    }
-
-
-    .logo h2 {
-
-        display: block;
-
-        font-size: 18px;
-    }
-
-
-    .logo-icon {
-
-        width: 32px;
-
-        height: 32px;
-    }
-
-
-    /* =====================================
-       NAVIGATION
-    ====================================== */
-
-    .navigation {
-
-        display: flex;
-
-        flex-direction: row;
-
-        gap: 4px;
-    }
-
-
-    .nav-link {
-
-        width: 38px;
-
-        height: 38px;
-
-        padding: 0;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        border-radius: 9px;
-    }
-
-
-    .nav-link span {
-
-        display: none;
-    }
-
-
-    .nav-link svg {
-
-        width: 18px;
-
-        height: 18px;
-    }
-
-
-    /* Hide less important items */
-
-    .navigation .nav-link:nth-child(5),
-    .navigation .nav-link:nth-child(6) {
-
-        display: none;
-    }
-
-
-    /* Active indicator */
-
-    .nav-link.active::before {
-
-        display: none;
-    }
-
-
-    /* =====================================
-       SIDEBAR BOTTOM
-    ====================================== */
-
-    .sidebar-bottom {
-
-        display: none;
-    }
-
-
-    /* =====================================
-       MAIN CONTENT
-    ====================================== */
-
-    .main-content {
-
-        width: 100%;
-
-        padding: 22px 16px;
-    }
-
-
-    /* =====================================
-       TOP BAR
-    ====================================== */
-
-    .top-bar {
-
-        margin-bottom: 22px;
-    }
-
-
-    .top-bar h1 {
-
-        font-size: 23px;
-
-        line-height: 1.3;
-    }
-
-
-    .small-heading {
-
-        font-size: 9px;
-    }
-
-
-    .date {
-
-        font-size: 11px;
-    }
-
-
-    .top-icons {
-
-        display: flex;
-    }
-
-
-    .top-icons button {
-
-        width: 34px;
-
-        height: 34px;
-    }
-
-
-    /* =====================================
-       QUICK STATS
-    ====================================== */
-
-    .quick-stats {
-
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-    }
-
-
-    .stat-card {
-
-        min-height: auto;
-
-        padding: 18px;
-    }
-
-
-    .stat-card h2 {
-
-        font-size: 24px;
-    }
-
-
-    /* =====================================
-       DASHBOARD CARDS
-    ====================================== */
-
-    .dashboard-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-    }
-
-
-    .bottom-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-    }
-
-
-    .dashboard-card {
-
-        padding: 18px;
-
-        border-radius: 14px;
-    }
-
-
-    /* =====================================
-       TASKS
-    ====================================== */
-
-    .task {
-
-        gap: 8px;
-    }
-
-
-    .task-left {
-
-        min-width: 0;
-    }
-
-
-    .task h3 {
-
-        font-size: 12px;
-    }
-
-
-    .task p {
-
-        font-size: 9px;
-    }
-
-
-    .task-status {
-
-        flex-shrink: 0;
-    }
-
-
-    /* =====================================
-       HABITS
-    ====================================== */
-
-    .habit {
-
-        padding: 10px 0;
-    }
-
-
-    .habit-icon {
-
-        width: 35px;
-
-        height: 35px;
-
-        margin-right: 10px;
-    }
-
-
-    .habit-info h3 {
-
-        font-size: 12px;
-    }
-
-
-    /* =====================================
-       ANALYTICS
-    ====================================== */
-
-    .analytics-stats {
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 8px;
-    }
-
-
-    .analytics-stats strong {
-
-        font-size: 15px;
-    }
-
-
-    /* =====================================
-       CHART
-    ====================================== */
-
-    .chart {
-
-        overflow-x: auto;
-    }
-
-
-    .chart-bars {
-
-        min-width: 400px;
-    }
-
-
-    /* =====================================
-       POMODORO
-    ====================================== */
-
-    .timer h1 {
-
-        font-size: 38px;
-    }
-
-
-    /* =====================================
-       QUOTE
-    ====================================== */
-
-    .quote-card {
-
-        padding: 18px;
-
-        gap: 12px;
-    }
-
-
-    .quote-card h2 {
-
-        font-size: 13px;
-
-        line-height: 1.5;
-    }
-
-}
-
-
-/* =========================================
-   VERY SMALL MOBILE
-   400px and below
-========================================= */
-
-@media (max-width: 400px) {
-
-    .sidebar {
-
-        height: 60px;
-
-        padding: 0 10px;
-    }
-
-
-    .logo h2 {
-
-        font-size: 16px;
-    }
-
-
-    .logo-icon {
-
-        width: 29px;
-
-        height: 29px;
-    }
-
-
-    .navigation {
-
-        gap: 2px;
-    }
-
-
-    .nav-link {
-
-        width: 34px;
-
-        height: 34px;
-    }
-
-
-    .nav-link svg {
-
-        width: 16px;
-
-        height: 16px;
-    }
-
-
-    .main-content {
-
-        padding: 18px 12px;
-    }
-
-
-    .top-bar h1 {
-
-        font-size: 20px;
-    }
-
-
-    .dashboard-card {
-
-        padding: 15px;
-    }
-
-
-    .section-header h2 {
-
-        font-size: 16px;
-    }
-
-
-    .analytics-stats {
-
-        grid-template-columns: 1fr 1fr;
-    }
-
-}
-/* =========================
-   ADD TASK FORM
-========================= */
-
-.add-task-form {
-    display: none;
-    margin-top: 18px;
-    padding: 24px;
-    border: 1px solid #e8e8e8;
-    border-radius: 18px;
-    background: #ffffff;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-}
-
-
-/* Header */
-
-.add-task-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 22px;
-}
-
-.add-task-header h3 {
-    margin: 4px 0 0;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.close-task-button {
-    width: 32px;
-    height: 32px;
-    border: none;
-    border-radius: 50%;
-    background: #f5f5f5;
-    font-size: 20px;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* Input */
-
-.task-input-group {
-    margin-bottom: 18px;
-}
-
-.task-input-group label,
-.task-option label {
-    display: block;
+    opacity: 0.6;
+    letter-spacing: 1px;
     margin-bottom: 8px;
+}
+
+.insight-quote {
     font-size: 13px;
-    font-weight: 500;
-    color: #666;
+    font-style: italic;
+    line-height: 1.4;
+    opacity: 0.9;
+    margin-bottom: 14px;
 }
 
-#taskInput,
-.task-option select {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 12px 14px;
-
-    border: 1px solid #dedede;
-    border-radius: 12px;
-
-    background: #fafafa;
-
-    font-family: inherit;
-    font-size: 14px;
-
-    outline: none;
-
-    transition: 0.2s ease;
-}
-
-#taskInput:focus,
-.task-option select:focus {
-    border-color: #999;
-    background: #ffffff;
-}
-
-
-/* Date + Category */
-
-.task-options {
+.insight-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
-
-    margin-bottom: 20px;
+    gap: 10px;
 }
 
-
-/* Save Button */
-
-.save-task-button {
-    width: 100%;
-
-    padding: 13px 18px;
-
-    border: none;
-    border-radius: 12px;
-
-    background: #111111;
-    color: white;
-
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-
-    transition: 0.2s ease;
+.i-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.save-task-button:hover {
-    transform: translateY(-1px);
+.i-box span {
+    font-size: 10px;
+    opacity: 0.6;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.i-box strong {
+    font-size: 12px;
+}
+
+.focus-today {
+    margin-top: 14px;
+}
+
+.focus-today p {
+    font-size: 11px;
+    opacity: 0.7;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.focus-today ul {
+    list-style: none;
+    font-size: 11px;
+    line-height: 1.8;
     opacity: 0.9;
 }
 
+/* ===== BOTTOM ===== */
 
-/* Mobile */
-
-@media (max-width: 600px) {
-
-    .task-options {
-        grid-template-columns: 1fr;
-    }
-
-    .add-task-form {
-        padding: 18px;
-    }
-
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.4fr;
+    gap: 18px;
+    margin-bottom: 20px;
 }
 
-/* =========================
-   STREAK CARD
-   ========================= */
-
-.focus-streak-row .streak-card {
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
+.timer-streak-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
 }
 
-.focus-streak-row .streak-content {
+.pomodoro-card,
+.streak-card {
+    background: white;
+    border-radius: 17px;
+    padding: 22px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
+}
+
+.timer-display {
+    font-size: 44px;
+    font-weight: 800;
+    text-align: center;
+    margin: 16px 0 6px;
+}
+
+.timer-status {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.timer-controls button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    background: #f3f6f2;
+    border: 1px solid #e8ebe5;
+}
+
+#startTimer {
+    background: #719377;
+    color: white;
+    border-color: #719377;
+}
+
+.analytics-card {
+    background: white;
+    border-radius: 17px;
+    padding: 22px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
+}
+
+.analytics-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 16px 0;
+}
+
+.analytics-stats div {
+    background: #f7f8f5;
+    padding: 11px;
+    border-radius: 9px;
+}
+
+.quote-card {
+    background: #e8f0e8;
+    border-radius: 17px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+/* =========================================
+   BOTTOM GRID - POMODORO + STREAK + WEEKLY
+========================================= */
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.4fr;
+    gap: 18px;
     margin-top: 20px;
 }
 
-/* Current streak number */
-.focus-streak-row .current-streak {
-    display: flex;
-    align-items: baseline;
-    gap: 7px;
+.timer-streak-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    width: 100%;
 }
 
-.focus-streak-row .current-streak strong {
-    font-size: 40px;
-    line-height: 1;
-    font-weight: 700;
-}
+/* ===== POMODORO CARD ===== */
 
-.focus-streak-row .current-streak span {
-    font-size: 14px;
-    color: #777;
-}
-
-/* Message */
-.focus-streak-row .streak-message {
-    margin: 8px 0 0;
-    font-size: 13px;
-    color: #777;
-}
-
-
-/* Fire icon */
-.focus-streak-row .streak-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 13px;
-    background: #f5f5f5;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 21px;
-}
- /* =========================
-   DAILY STREAK CARD
-========================= */
-
-.streak-card {
-    position: relative;
+.pomodoro-card {
+    background: white;
+    border-radius: 17px;
+    padding: 22px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 320px;
-    padding: 24px;
-    box-sizing: border-box;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
 }
 
-/* Header */
+.pomodoro-card .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.timer {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timer h1,
+.timer-display {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.timer p,
+.timer-status {
+    font-size: 12px;
+    color: #969b94;
+    margin-top: 6px;
+}
+
+.timer-buttons,
+.timer-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.timer-buttons button,
+.timer-controls button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 11px;
+    border: 1px solid #e8ebe5;
+    background: #f3f6f2;
+}
+
+.start-button,
+#startTimer {
+    background: #719377 !important;
+    color: white !important;
+    border-color: #719377 !important;
+}
+
+.pomodoro-task {
+    margin-top: 12px;
+}
+
+.pomodoro-task label {
+    font-size: 10px;
+    color: #888;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.pomodoro-task select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e2e5e0;
+    background: #fafbf9;
+    font-size: 11px;
+}
+
+/* ===== DAILY STREAK CARD ===== */
+
+.streak-card {
+    background: white;
+    border-radius: 17px;
+    padding: 22px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
+}
 
 .streak-card .section-header {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
-    width: 100%;
-    margin-bottom: 22px;
+    align-items: flex-start;
+    margin-bottom: 16px;
 }
-
-.streak-card .card-label {
-    margin: 0 0 6px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.streak-card h2 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 700;
-}
-
-/* Fire icon */
 
 .streak-icon {
+    width: 36px;
+    height: 36px;
+    background: #f5f5f5;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    width: 48px;
-    height: 48px;
-
-    border-radius: 14px;
-
-    font-size: 25px;
-
-    flex-shrink: 0;
-}
-
-/* Main streak area */
-
-.streak-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    width: 100%;
-    margin-bottom: 24px;
 }
 
 .current-streak {
     display: flex;
     align-items: baseline;
-    gap: 8px;
+    gap: 6px;
+    margin-top: 10px;
 }
 
 .current-streak strong {
-    font-size: 52px;
-    line-height: 1;
+    font-size: 36px;
     font-weight: 800;
 }
 
 .current-streak span {
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 13px;
+    color: #777;
 }
 
 .streak-message {
-    margin: 8px 0 0;
-
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 12px;
+    color: #888;
+    margin-top: 6px;
 }
 
-/* Weekly streak */
-
 .streak-week {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    width: 100%;
-    margin-top: auto;
-    margin-bottom: 22px;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: auto !important;
+    padding-top: 18px;
 }
 
 .streak-day {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-
-    min-width: 28px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 6px !important;
 }
 
 .streak-day span {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
-    text-transform: uppercase;
+    color: #999;
 }
 
 .streak-dot {
-    width: 14px;
-    height: 14px;
-
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-
-    box-sizing: border-box;
+    border: 2px solid #9cb19e;
+    background: white;
 }
-
-/* Completed day */
 
 .streak-day.active .streak-dot {
-    transform: scale(1.05);
+    background: #719377;
 }
-
-/* Best streak */
 
 .best-streak {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
+    align-items: center;
     width: 100%;
-
-    padding-top: 16px;
-
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f1ef;
+    font-size: 12px;
 }
 
-.best-streak span {
-    font-size: 13px;
-    font-weight: 500;
+/* ===== WEEKLY PROGRESS ===== */
+
+.analytics-card {
+    background: white;
+    border-radius: 17px;
+    padding: 22px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
 }
 
-.best-streak strong {
-    font-size: 14px;
-    font-weight: 700;
-} 
+.week-select {
+    border: 1px solid #e4e7e2;
+    padding: 6px 10px;
+    border-radius: 7px;
+    font-size: 10px;
+    background: white;
+}
 
-
-
-/* =====================================
-   TASKS + HABITS SIDE BY SIDE
-===================================== */
-
-.tasks-habits-row {
+.analytics-stats {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 18px 0 24px;
 }
 
-
-/* Both cards are independent blocks */
-
-.tasks-habits-row > .tasks-card,
-.tasks-habits-row > .habits-card {
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
+.analytics-stats div {
+    background: #f7f8f5;
+    padding: 12px;
+    border-radius: 10px;
 }
 
-
-/* Add Task stays inside Tasks card */
-
-.tasks-card .add-task-button {
-    width: 100%;
-    box-sizing: border-box;
+.analytics-stats span {
+    font-size: 9px;
+    color: #929791;
+    display: block;
+    margin-bottom: 4px;
 }
 
-
-/* Add Task form stays inside Tasks card */
-
-.tasks-card .add-task-form {
-    width: 100%;
-    box-sizing: border-box;
+.analytics-stats strong {
+    font-size: 15px;
+    display: block;
 }
 
-
-/* Mobile */
-
-@media (max-width: 800px) {
-
-    .tasks-habits-row {
-        grid-template-columns: 1fr;
-    }
-
+.chart {
+    height: 110px;
+    border-bottom: 1px solid #e6e8e4;
+    margin-top: 10px;
 }
 
-/* =========================================
-   POMODORO + STREAK SIDE BY SIDE
-========================================= */
-
-.timer-streak-row {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 20px !important;
-    width: 100% !important;
-    align-items: stretch !important;
-}
-
-.timer-streak-row .pomodoro-card,
-.timer-streak-row .streak-card {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-}
-
-
-/* STREAK */
-
-.timer-streak-row .streak-card {
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 24px !important;
-}
-
-.timer-streak-row .streak-card .section-header {
+.chart-bars {
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0 10px;
 }
 
-.timer-streak-row .streak-content {
-    width: 100%;
-}
-
-.timer-streak-row .streak-week {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.timer-streak-row .streak-day {
+.bar-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
-.timer-streak-row .best-streak {
+.bar {
+    width: 22px;
+    background: #9cb19e;
+    border-radius: 6px 6px 0 0;
+}
+
+.bar-1 { height: 45px; }
+.bar-2 { height: 70px; }
+.bar-3 { height: 55px; }
+.bar-4 { height: 95px; }
+.bar-5 { height: 65px; }
+.bar-6 { height: 110px; }
+.bar-7 { height: 80px; }
+
+.bar-container span {
+    font-size: 9px;
+    color: #999;
+}
+
+/* ===== MOTIVATION QUOTE ===== */
+
+.quote-card {
+    background: #e8f0e8;
+    border-radius: 17px;
+    padding: 18px 22px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    gap: 14px;
+    margin-top: 18px;
 }
 
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .timer-streak-row {
-        grid-template-columns: 1fr !important;
-    }
-
-}
-
-:root {
-    --clover-green: #9CB19E;
-    --clover-green-dark: #718B78;
-    --clover-green-light: #E3EAE3;
-
-    --clover-bg: #F5F1E8;
-    --clover-card: #ffffff;
-
-    --clover-text: #252724;
-    --clover-muted: #777970;
-
-    --clover-border: #E5E2D9;
-}
-
-/* =========================================
-   POMODORO + STREAK ROW
-========================================= */
-
-.timer-streak-row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    width: 100%;
-    align-items: stretch;
-}
-
-.timer-streak-row > .dashboard-card {
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-}
-
-
-/* =========================================
-   POMODORO CARD
-========================================= */
-
-.pomodoro-card {
+.quote-icon {
+    width: 38px;
+    height: 38px;
+    background: white;
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    min-height: 320px;
-    padding: 24px;
-    box-sizing: border-box;
-
-    background: var(--clover-card);
-    color: var(--clover-text);
-    border: 1px solid var(--clover-border);
-    border-radius: 20px;
-}
-
-
-/* Header */
-
-.pomodoro-card .section-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.pomodoro-card .card-label {
-    margin: 0 0 6px;
-
-    color: var(--clover-muted);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-}
-
-.pomodoro-card h2 {
-    margin: 0;
-
-    color: var(--clover-text);
-    font-size: 22px;
-    font-weight: 700;
-}
-
-
-/* Lucide timer icon */
-
-.pomodoro-icon {
-    width: 25px;
-    height: 25px;
-
-    padding: 10px;
-
-    color: var(--clover-green-dark);
-    background: var(--clover-green-light);
-
-    border-radius: 12px;
-
-    stroke-width: 1.8;
-    box-sizing: content-box;
-}
-
-
-/* Timer area */
-
-.pomodoro-content {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    flex: 1;
-    width: 100%;
-
-    text-align: center;
 }
 
-.timer-display {
-    color: var(--clover-text);
-
-    font-size: 52px;
-    line-height: 1;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.timer-status {
-    margin: 10px 0 0;
-
-    color: var(--clover-muted);
-
+.quote-card h2 {
     font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
 }
-
-
-/* =========================================
-   TIMER BUTTONS
-========================================= */
+/* ===== FIX SESSIONS COMPLETED ===== */
 
 .timer-controls {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    gap: 10px;
-    width: 100%;
-    margin-top: 20px;
+    gap: 8px;
+    margin-top: 18px;
+    margin-bottom: 16px;
 }
 
-.timer-controls button {
-    padding: 10px 18px;
-
-    color: var(--clover-text);
-    background: var(--clover-green-light);
-
-    border: 1px solid var(--clover-green);
-    border-radius: 10px;
-
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease;
-}
-
-.timer-controls button:hover {
-    background: var(--clover-green);
-    color: #ffffff;
-    transform: translateY(-1px);
-}
-
-
-/* Start button */
-
-#startTimer {
-    color: #ffffff;
-    background: var(--clover-green-dark);
-    border-color: var(--clover-green-dark);
-}
-
-#startTimer:hover {
-    background: var(--clover-green);
-    border-color: var(--clover-green);
-}
-
-
-/* =========================================
-   COMPLETED SESSIONS
-========================================= */
-
-.pomodoro-sessions {
+.pomodoro-sessions,
+.sessions-info,
+.pomodoro-footer {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between;
-
     width: 100%;
-    margin-top: 20px;
-    padding-top: 15px;
-
-    border-top: 1px solid var(--clover-border);
-}
-
-.pomodoro-sessions span {
-    color: var(--clover-muted);
-    font-size: 13px;
-}
-
-.pomodoro-sessions strong {
-    color: var(--clover-green-dark);
-    font-size: 14px;
-}
-
-
-/* =========================================
-   STREAK CARD
-========================================= */
-
-.streak-card {
-    display: flex;
-    flex-direction: column;
-
-    min-height: 320px;
-    padding: 24px;
-
-    box-sizing: border-box;
-
-    background: var(--clover-card);
-    color: var(--clover-text);
-
-    border: 1px solid var(--clover-border);
-    border-radius: 20px;
-}
-
-
-/* Header */
-
-.streak-card .section-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    width: 100%;
-    margin-bottom: 22px;
-}
-
-.streak-card .card-label {
-    margin: 0 0 6px;
-
-    color: var(--clover-muted);
-
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #f0f1ef;
     font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+    color: #8a8f89;
 }
 
-.streak-card h2 {
-    margin: 0;
-
-    color: var(--clover-text);
-
-    font-size: 22px;
-    font-weight: 700;
+/* For your current HTML where text is just inside card */
+.pomodoro-card > p:last-child,
+.pomodoro-card .sessions-completed {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #f0f1ef;
+    font-size: 11px;
+    color: #8a8f89;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* Make the 0 bold and green */
+.pomodoro-card > p:last-child strong,
+.sessions-completed strong,
+.sessions-completed span {
+    color: #719377;
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: 4px;
+}
+.stat-card,
+.dashboard-card,
+.pomodoro-card,
+.streak-card,
+.analytics-card,
+.mood-card,
+.insight-card,
+.quote-card {
+    transition: all 0.25s ease;
+    border: 1px solid #e8ebe5;
+}
 
-/* Streak icon */
+.stat-card:hover,
+.dashboard-card:hover,
+.pomodoro-card:hover,
+.streak-card:hover,
+.analytics-card:hover,
+.mood-card:hover,
+.quote-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(113, 147, 119, 0.18);
+    border-color: #d8e3d8;
+}
 
-.streak-icon {
+.insight-card {
+    transition: all 0.25s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(30, 58, 58, 0.25);
+}
+
+.mood-emojis {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.mood-emojis span {
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    width: 44px;
-    height: 44px;
-
-    color: var(--clover-green-dark);
-    background: var(--clover-green-light);
-
-    border-radius: 12px;
-
-    font-size: 21px;
-}
-
-
-/* Main streak */
-
-.streak-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    width: 100%;
-    margin-bottom: 22px;
-}
-
-.current-streak {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-}
-
-.current-streak strong {
-    color: var(--clover-text);
-
-    font-size: 52px;
-    line-height: 1;
-    font-weight: 800;
-}
-
-.current-streak span {
-    color: var(--clover-muted);
-    font-size: 15px;
-}
-
-.streak-message {
-    margin: 8px 0 0;
-
-    color: var(--clover-muted);
-
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-
-/* =========================================
-   STREAK WEEK
-========================================= */
-
-.streak-week {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    width: 100%;
-    margin-top: auto;
-    margin-bottom: 20px;
-}
-
-.streak-day {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 8px;
-}
-
-.streak-day span {
-    color: var(--clover-muted);
-
-    font-size: 11px;
-    font-weight: 600;
-}
-
-.streak-dot {
-    width: 14px;
-    height: 14px;
-
+    border-radius: 10px;
     background: transparent;
-
-    border: 2px solid var(--clover-green);
-    border-radius: 50%;
-
-    box-sizing: border-box;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    border: 1px solid transparent;
 }
 
-
-/* Completed days */
-
-.streak-day.active .streak-dot {
-    background: var(--clover-green);
-    border-color: var(--clover-green);
+.mood-emojis span:hover {
+    background: #e8f0e8;
+    transform: translateY(-2px) scale(1.15);
+    box-shadow: 0 6px 14px rgba(113, 147, 119, 0.25);
+    border-color: #c8d9c8;
+}
+.mood-emojis span.active {
+    background: #d8e8d8;
+    border-color: #719377;
+    box-shadow: 0 6px 14px rgba(113, 147, 119, 0.3);
+    transform: scale(1.1);
 }
 
-
-/* =========================================
-   BEST STREAK
-========================================= */
-
-.best-streak {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 100%;
-    padding-top: 15px;
-
-    border-top: 1px solid var(--clover-border);
+.task:hover,
+.habit:hover {
+    background: #f9fbf8;
+    border-radius: 8px;
+    transition: all 0.2s ease;
 }
 
-.best-streak span {
-    color: var(--clover-muted);
-    font-size: 13px;
+.small-button:hover,
+.add-task-button:hover,
+.timer-controls button:hover {
+    background: #e8f0e8 !important;
+    border-color: #b8ccb8 !important;
+    color: #5f8064 !important;
+    box-shadow: 0 4px 12px rgba(113, 147, 119, 0.15);
 }
 
-.best-streak strong {
-    color: var(--clover-green-dark);
-    font-size: 14px;
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1100px) {
+
+    .tasks-habits-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .right-extra-col {
+        grid-column: span 2;
+        flex-direction: row;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
+@media (max-width: 700px) {
 
-/* =========================================
-   MOBILE
-========================================= */
+    .sidebar {
+        width: 100%;
+        height: 64px;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 14px;
+    }
 
-@media (max-width: 768px) {
+    .navigation {
+        flex-direction: row;
+    }
 
-    .timer-streak-row {
+    .nav-link span,
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .main-content {
+        margin: 0;
+        width: 100%;
+        padding: 18px 14px;
+    }
+
+    .quick-stats,
+    .tasks-habits-row,
+    .timer-streak-row,
+    .bottom-grid {
         grid-template-columns: 1fr;
     }
 
-    .pomodoro-card,
-    .streak-card {
-        min-height: 300px;
+    .right-extra-col {
+        flex-direction: column;
     }
-
-    .timer-display,
-    .current-streak strong {
-        font-size: 46px;
-    }
-
 }

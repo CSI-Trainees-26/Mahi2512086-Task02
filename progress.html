@@ -131,9 +131,39 @@
 
     </div>
 
+     <!-- TODAY'S MOTIVATION - Fits your CLOVER UI -->
+<div class="motivation-wrapper">
+  <div class="motivation-card">
+    <div class="motivation-img">
+      <img src= "images/WhatsApp Image 2026-09-09 at 18.37.13.jpg" alt="motivation texture">
+    </div>
+    <div class="motivation-content">
+      <div class="motivation-top">
+        <span class="motivation-label">TODAY'S MOTIVATION</span>
+        <span class="motivation-date" id="motivationDate"></span>
+      </div>
+      <p class="motivation-quote" id="quoteText">"Loading today's quote..."</p>
+      <small class="motivation-author" id="quoteAuthor"></small>
+      
+      <div class="motivation-actions">
+        <button id="likeBtn" class="m-btn like">🤍 Like</button>
+        <button id="saveBtn" class="m-btn save">🔖 Save</button>
+        <button id="newQuoteBtn" class="m-btn new">↻ New</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Saved quotes will show here, same style -->
+  <div class="saved-box" id="savedBox" style="display:none;">
+    <h4>Saved Quotes <span id="savedCount">0</span></h4>
+    <div id="savedList"></div>
+  </div>
+</div>
+
+
     <!-- TIMELINE -->
     <div class="card timeline-card">
-      <h3>Timeline — 2024</h3>
+      <h3>Timeline — 2026</h3>
       <p class="sub">Activity across the year</p>
       <div class="timeline">
         <div class="t"><i class="full"></i><span>Jan</span></div>
@@ -163,5 +193,6 @@
   </footer>
 
 </div>
+<script src="progress.js"></script>
 </body>
 </html>

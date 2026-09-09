@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLOVER - Pomodoro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="timer.css" />
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">☘ CLOVER</div>
+
+        <nav>
+            <a href="index.html" class="sidebar-link">Dashboard</a>
+            <a href="#" class="sidebar-link active">Pomodoro</a>
+            <a href="water.html" class="sidebar-link">Water</a>
+            <a href="progress.html" class="sidebar-link">Progress</a>
+            <a href="habits.html" class="sidebar-link">Habits</a>
+            <a href="settings.html" class="sidebar-link">Settings</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- HERO -->
+        <section class="pomodoro-hero">
+            <div class="hero-content">
+                <span class="hero-label">FOCUS MODE</span>
+                <h1>POMODORO</h1>
+                <p>Stay focused. Take breaks. Repeat.</p>
+            </div>
+
+            <div class="hero-img">
+                <img src="alarm-clock.png" alt="alarm clock">
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="pomodoro-marquee">
+            <div class="marquee-track">
+                <span>FOCUS • BREAK • REPEAT • FOCUS • BREAK • REPEAT •</span>
+                <span>FOCUS • BREAK • REPEAT • FOCUS • BREAK • REPEAT •</span>
+                <span>FOCUS • BREAK • REPEAT • FOCUS • BREAK • REPEAT •</span>
+                
+            </div>
+            </div>
+            
+        </div>
+
+        <!-- WORKSPACE -->
+        <div class="pomodoro-workspace">
+
+            <!-- TOP STATS -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i>◧</i>
+                    <div>
+                        <h2>25min</h2>
+                        <small>Focus</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <i>⚑</i>
+                    <div>
+                        <h2>5min</h2>
+                        <small>Break</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <i>◉</i>
+                    <div>
+                        <h2>4</h2>
+                        <small>Sessions</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <i>◷</i>
+                    <div>
+                        <h2>2hr</h2>
+                        <small>Today</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MIDDLE -->
+            <div class="mid-grid">
+
+
+                <!-- TIMER CARD -->
+                <div class="card timer-card">
+                    <div class="card-head">
+                        <h3>Current Session</h3>
+                        <span class="active-tag">Active</span>
+                    </div>
+
+                    <div class="circle-wrap">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="bg" cx="60" cy="60" r="54"></circle>
+                            <circle class="fg" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="0"></circle>
+                        </svg>
+
+                        <div class="circle-text">
+                            <strong>25:00</strong>
+                            <span>Focus • Round 1/4</span>
+                        </div>
+                    </div>
+
+                    <div class="timer-controls">
+                    <button class="start-btn" id="startBtn">Start</button>
+                    <button class="reset-btn" id="resetBtn">Reset</button>
+                    </div>
+                    <small class="timer-note" id="timerNote">Ready to focus</small>
+                </div>
+
+                <!-- RIGHT STACK -->
+                <div class="right-stack">
+
+                    <div class="card">
+                        <h3>Today's Tasks</h3>
+
+                        <div class="task">
+                            <input type="checkbox" checked>
+                            <span>Draft project proposal</span>
+                            <em>Work</em>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox">
+                            <span>Review design mockups</span>
+                            <em>Design</em>
+                        </div>
+
+                        <div class="task">
+                            <input type="checkbox">
+                            <span>Team standup 3pm</span>
+                            <em>Meeting</em>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Focus History</h3>
+
+                        <div class="history-bars">
+                            <div><b style="height:22px"></b><span>Mon</span></div>
+                            <div><b style="height:32px"></b><span>Tue</span></div>
+                            <div><b style="height:48px"></b><span>Wed</span></div>
+                            <div><b style="height:40px"></b><span>Thu</span></div>
+                            <div><b style="height:35px"></b><span>Fri</span></div>
+                            <div><b style="height:50px"></b><span>Fri</span></div>
+                            <div><b style="height:30px"></b><span>Sat</span></div>
+                            <div><b style="height:26px"></b><span>Sun</span></div>
+                        </div>
+
+                        <div class="streak">
+                            <i>🔥</i>
+                            <div>
+                                <strong>Streak 5 days</strong>
+                                <small>Keep it up! Longest: 7 days</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                    <!-- EXTRA CONTENT - MAKES PAGE LONG LIKE WATER -->
+
+        <!-- ROW 1: Session History + Weekly Goal -->
+        <div class="mid-grid">
+
+            <div class="card">
+                <h3>Recent Sessions</h3>
+                <div class="session-list">
+                    <div class="session-row"><span>09:30 AM - Focus</span><b>25 min</b><em class="done">Done</em></div>
+                    <div class="session-row"><span>10:00 AM - Break</span><b>5 min</b><em class="done">Done</em></div>
+                    <div class="session-row"><span>10:10 AM - Focus</span><b>25 min</b><em class="done">Done</em></div>
+                    <div class="session-row"><span>10:45 AM - Focus</span><b>25 min</b><em>active</em></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Weekly Goal</h3>
+                <div class="goal-circle-wrap">
+                    <svg viewBox="0 0 100 100" class="goal-ring">
+                        <circle cx="50" cy="50" r="42" class="bg"></circle>
+                        <circle cx="50" cy="50" r="42" class="fg" style="stroke-dasharray:264; stroke-dashoffset:66"></circle>
+                    </svg>
+                    <div class="goal-text"><strong>75%</strong><span>15 / 20 hours</span></div>
+                </div>
+                <p class="goal-note">You're 5 hours away from your weekly goal. Keep going!</p>
+            </div>
+
+        </div>
+
+        <!-- ROW 2: Insights -->
+        <div class="card insights-card">
+            <h3>Productivity Insights</h3>
+            <div class="insights-grid">
+                <div><h4>Best Focus Time</h4><p>10 AM - 12 PM</p></div>
+                <div><h4>Avg. Session</h4><p>23 minutes</p></div>
+                <div><h4>Completion Rate</h4><p>92%</p></div>
+                <div><h4>Most Productive Day</h4><p>Wednesday</p></div>
+            </div>
+        </div>
+        </div>
+
+        <footer class="site-footer clover-footer">
+    <div class="footer-top">
+        <div class="footer-col brand-col">
+            <h4>CLOVER</h4>
+            <p>A calm space to focus deeper,<br>
+            stay in flow, and make every<br>
+            minute count — one session at<br>
+            a time.</p>
+        </div>
+        
+        <div class="footer-col">
+            <h4>YOUR FOCUS</h4>
+            <ul>
+                <li>Start a session</li>
+                <li>Stay in flow</li>
+                <li>Take mindful breaks</li>
+                <li>Track focus time</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>EXPLORE</h4>
+            <ul>
+                <li>Dashboard</li>
+                <li>Tasks</li>
+                <li>Habits</li>
+                <li>Progress</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-logo">CLOVER</div>
+
+    <div class="footer-bottom">
+        <span>© 2026 CLOVER • BUILT FOR CONSISTENCY</span>
+        <span>HELP • PRIVACY • SUPPORT</span>
+    </div>
+</footer>
+<script src="timer.js"></script>
+</body>
+</html>
